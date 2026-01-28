@@ -1,3 +1,6 @@
+import snapsellImage from "@/assets/snapsell-app.png";
+import practiceImage from "@/assets/practice-app.png";
+
 interface AdditionalWorkItem {
   title: string;
   subtitle: string;
@@ -15,7 +18,7 @@ const additionalWorkItems: AdditionalWorkItem[] = [
     subtitle: "Messaging and Positioning",
     description:
       "An AI-powered app for novice sports players to improve their game. Led customer segmentation resulting in prioritization of different customer personas for MVP. Drove definition of value proposition and crafted positioning and messaging frameworks for identified target audience.",
-    image: "/placeholder.svg",
+    image: practiceImage,
     link: {
       text: "customer segmentation",
       url: "https://miro.com/app/board/uXjVJ7QTgG0=/?share_link_id=826969306234",
@@ -26,7 +29,7 @@ const additionalWorkItems: AdditionalWorkItem[] = [
     subtitle: "Messaging and Positioning",
     description:
       "4th place winner in Flowgad Hackathon. An AI-powered marketplace app for casual sellers to make a few extra bucks. Developed product and messaging positioning for casual sellers through market analysis and customer feedback. Presented live the product demo and value prop for an AI-powered marketplace app.",
-    image: "/placeholder.svg",
+    image: snapsellImage,
   },
 ];
 
