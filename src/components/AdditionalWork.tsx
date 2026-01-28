@@ -63,14 +63,14 @@ export function AdditionalWork() {
             Additional PMM Work
           </h2>
 
-          <div className="grid md:grid-cols-2 gap-8">
+          <div className="flex flex-col gap-8">
             {additionalWorkItems.map((item) => (
               <article
                 key={item.title}
-                className="bg-background rounded-xl overflow-hidden border border-border/50"
+                className="bg-background rounded-xl overflow-hidden border border-border/50 flex flex-col md:flex-row"
               >
                 {/* Image */}
-                <div className="aspect-video overflow-hidden bg-muted">
+                <div className="md:w-1/2 flex-shrink-0 bg-muted">
                   <img
                     src={item.image}
                     alt={item.title}
@@ -79,7 +79,7 @@ export function AdditionalWork() {
                 </div>
 
                 {/* Content */}
-                <div className="p-6 space-y-3">
+                <div className="p-6 space-y-3 flex flex-col justify-center">
                   <div>
                     <h3 className="text-xl font-semibold text-foreground">
                       {item.title}
