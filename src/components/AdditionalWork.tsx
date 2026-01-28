@@ -16,7 +16,7 @@ const additionalWorkItems: AdditionalWorkItem[] = [
     title: "Practice App",
     subtitle: "Messaging and Positioning",
     description:
-      "An AI-powered app for novice sports players to improve their game. Led customer segmentation resulting in prioritization of different customer personas for MVP. Drove definition of value proposition and crafted positioning and messaging frameworks for identified target audience.",
+      "Gemini 3 Hackathon Participant. An AI-powered app for novice sports players to improve their game. Led customer segmentation resulting in prioritization of different customer personas for MVP. Drove definition of value proposition and crafted positioning and messaging frameworks for identified target audience.",
     image: practiceAppImage,
     link: {
       text: "customer segmentation",
@@ -27,7 +27,7 @@ const additionalWorkItems: AdditionalWorkItem[] = [
     title: "Snapsell App",
     subtitle: "Messaging and Positioning",
     description:
-      "4th place winner in Flowgad Hackathon. An AI-powered marketplace app for casual sellers to easily earn more. Developed product and messaging positioning for casual sellers through market analysis and customer feedback. Presented the product demo and value prop for an AI-powered marketplace app.",
+      "4th place winner in Flowgad Hackathon. An AI-powered marketplace app for casual sellers to make a few extra bucks. Developed product and messaging positioning for casual sellers through market analysis and customer feedback. Presented live the product demo and value prop for an AI-powered marketplace app.",
     image: snapsellImage,
   },
 ];
