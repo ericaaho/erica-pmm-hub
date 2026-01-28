@@ -16,7 +16,7 @@ const additionalWorkItems: AdditionalWorkItem[] = [
     title: "Practice App",
     subtitle: "Messaging and Positioning",
     description:
-      "An AI-powered app for novice sports players to improve their game. Led customer segmentation resulting in prioritization of different customer personas for MVP. Drove definition of value proposition and crafted positioning and messaging frameworks for identified target audience.",
+      "Gemini 3 Hackathon Particpant. An AI-powered app for novice sports players to improve their game. Led customer segmentation resulting in prioritization of different customer personas for MVP. Drove definition of value proposition and crafted positioning and messaging frameworks for identified target audience.",
     image: practiceAppImage,
     link: {
       text: "customer segmentation",
@@ -59,38 +59,23 @@ export function AdditionalWork() {
     <section className="py-16 md:py-20">
       <div className="container mx-auto px-6">
         <div className="max-w-5xl mx-auto">
-          <h2 className="text-3xl md:text-4xl font-semibold text-foreground mb-10">
-            Additional PMM Work
-          </h2>
+          <h2 className="text-3xl md:text-4xl font-semibold text-foreground mb-10">Additional PMM Work</h2>
 
-          <div className="flex flex-col gap-8">
+          <div className="grid md:grid-cols-2 gap-8">
             {additionalWorkItems.map((item) => (
-              <article
-                key={item.title}
-                className="bg-background rounded-xl overflow-hidden border border-border/50 flex flex-col md:flex-row"
-              >
+              <article key={item.title} className="bg-background rounded-xl overflow-hidden border border-border/50">
                 {/* Image */}
-                <div className="md:w-[280px] flex-shrink-0 bg-muted max-h-[280px] overflow-hidden">
-                  <img
-                    src={item.image}
-                    alt={item.title}
-                    className="w-full h-full object-contain"
-                  />
+                <div className="aspect-video overflow-hidden">
+                  <img src={item.image} alt={item.title} className="w-full h-full object-cover object-top" />
                 </div>
 
                 {/* Content */}
-                <div className="p-6 space-y-3 flex flex-col justify-center">
+                <div className="p-6 space-y-3">
                   <div>
-                    <h3 className="text-xl font-semibold text-foreground">
-                      {item.title}
-                    </h3>
-                    <p className="text-sm text-primary font-medium">
-                      {item.subtitle}
-                    </p>
+                    <h3 className="text-xl font-semibold text-foreground">{item.title}</h3>
+                    <p className="text-sm text-primary font-medium">{item.subtitle}</p>
                   </div>
-                  <p className="text-muted-foreground leading-relaxed text-sm">
-                    {formatDescription(item)}
-                  </p>
+                  <p className="text-muted-foreground leading-relaxed text-sm">{formatDescription(item)}</p>
                 </div>
               </article>
             ))}
