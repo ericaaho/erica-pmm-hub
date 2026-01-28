@@ -5,7 +5,7 @@ import { componentTagger } from "lovable-tagger";
 
 // https://vitejs.dev/config/
 export default defineConfig(({ mode }) => ({
-  base: '/erica-pmm-hub/', // Must match your exact GitHub repository name
+  base: '/', // Must match your exact GitHub repository name
   // ...other config
   server: {
     host: "::",
