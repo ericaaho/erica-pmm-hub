@@ -6,7 +6,7 @@ import { AdditionalWork } from "@/components/AdditionalWork";
 import { FindMeAt } from "@/components/FindMeAt";
 import profilePhoto from "@/assets/profile-photo.jpg";
 import divvyImage from "@/assets/divvy-ad.webp";
-import billVirtualCardImage from "@/assets/bill-virtual-card-new.png";
+import billVirtualCardImage from "@/assets/virtual-card-handdrawn.png";
 
 const values = [
   {
