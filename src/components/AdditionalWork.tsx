@@ -16,8 +16,7 @@ const additionalWorkItems: AdditionalWorkItem[] = [
     title: "Practice App",
     subtitle: "Messaging and Positioning",
     description:
-      "Gemini 3 Hackathon Participant. An AI-powered app for novice sports players to improve their game." 
-      "Led customer segmentation resulting in prioritization of different customer personas for MVP. Drove definition of value proposition and crafted positioning and messaging frameworks for identified target audience.",
+      "Gemini 3 Hackathon Participant. An AI-powered app for novice sports players to improve their game. Led customer segmentation resulting in prioritization of different customer personas for MVP. Drove definition of value proposition and crafted positioning and messaging frameworks for identified target audience.",
     image: practiceAppImage,
     link: {
       text: "customer segmentation",
