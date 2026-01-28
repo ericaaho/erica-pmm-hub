@@ -101,10 +101,6 @@ export default function Index() {
           <div className="max-w-5xl mx-auto">
             <div className="mb-12">
               <h2 className="text-3xl md:text-4xl font-semibold text-foreground mb-4">Notable PMM Work</h2>
-              <p className="text-lg text-muted-foreground leading-relaxed max-w-3xl">
-                A selection of product marketing projects where I drove measurable impact through strategic positioning,
-                customer research, and cross-functional collaboration.
-              </p>
             </div>
 
             <CaseStudy
