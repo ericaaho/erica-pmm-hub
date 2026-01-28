@@ -16,7 +16,8 @@ const additionalWorkItems: AdditionalWorkItem[] = [
     title: "Practice App",
     subtitle: "Messaging and Positioning",
     description:
-      "An AI-powered app for novice sports players to improve their game. Led customer segmentation resulting in prioritization of different customer personas for MVP. Drove definition of value proposition and crafted positioning and messaging frameworks for identified target audience.",
+      "Gemini 3 Hackathon Participant. An AI-powered app for novice sports players to improve their game." 
+      "Led customer segmentation resulting in prioritization of different customer personas for MVP. Drove definition of value proposition and crafted positioning and messaging frameworks for identified target audience.",
     image: practiceAppImage,
     link: {
       text: "customer segmentation",
@@ -63,23 +64,23 @@ export function AdditionalWork() {
             Additional PMM Work
           </h2>
 
-          <div className="flex flex-col gap-8">
+          <div className="grid md:grid-cols-2 gap-8">
             {additionalWorkItems.map((item) => (
               <article
                 key={item.title}
-                className="bg-background rounded-xl overflow-hidden border border-border/50 flex flex-col md:flex-row"
+                className="bg-background rounded-xl overflow-hidden border border-border/50"
               >
                 {/* Image */}
-                <div className="md:w-[280px] flex-shrink-0 bg-muted max-h-[280px] overflow-hidden">
+                <div className="aspect-video overflow-hidden">
                   <img
                     src={item.image}
                     alt={item.title}
-                    className="w-full h-full object-contain"
+                    className="w-full h-full object-cover object-top"
                   />
                 </div>
 
                 {/* Content */}
-                <div className="p-6 space-y-3 flex flex-col justify-center">
+                <div className="p-6 space-y-3">
                   <div>
                     <h3 className="text-xl font-semibold text-foreground">
                       {item.title}
