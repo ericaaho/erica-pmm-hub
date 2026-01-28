@@ -70,9 +70,9 @@ export function AdditionalWork() {
                 key={item.title}
                 className="bg-background rounded-xl overflow-hidden border border-border/50"
               >
-                <div className="grid md:grid-cols-[280px_1fr] gap-6 md:gap-8 items-stretch">
+                <div className="grid md:grid-cols-[280px_1fr] gap-6 md:gap-8 items-start">
                   {/* Image (match Notable PMM sizing) */}
-                  <div className="rounded-lg overflow-hidden border border-border/50 h-full">
+                  <div className="rounded-lg overflow-hidden border border-border/50 max-h-[180px]">
                     <img
                       src={item.image}
                       alt={item.title}
