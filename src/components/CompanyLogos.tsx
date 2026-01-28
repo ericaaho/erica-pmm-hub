@@ -1,7 +1,7 @@
 import daveLogo from "@/assets/dave-logo.png";
 import billLogo from "@/assets/bill-logo.png";
 import invoice2goLogo from "@/assets/invoice2go-logo.png";
-import intuitLogo from "@/assets/intuit-logo.avif";
+import intuitLogo from "@/assets/intuit-logo.png";
 
 const companies = [
   { name: "Dave", logo: daveLogo },
@@ -27,7 +27,7 @@ export function CompanyLogos() {
                 <img
                   src={company.logo}
                   alt={`${company.name} logo`}
-                  className="h-full w-auto max-w-[120px] md:max-w-[140px] object-contain grayscale hover:grayscale-0 transition-all duration-300"
+                  className="h-full w-auto max-w-[120px] md:max-w-[140px] object-contain"
                 />
               </div>
             ))}
