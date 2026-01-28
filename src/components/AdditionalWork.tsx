@@ -70,7 +70,7 @@ export function AdditionalWork() {
                 className="bg-background rounded-xl overflow-hidden border border-border/50 flex flex-col md:flex-row"
               >
                 {/* Image */}
-                <div className="md:w-1/2 flex-shrink-0 bg-muted">
+                <div className="md:w-[280px] flex-shrink-0 bg-muted max-h-[280px] overflow-hidden">
                   <img
                     src={item.image}
                     alt={item.title}
