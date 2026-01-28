@@ -27,11 +27,11 @@ export function CaseStudy({ title, titleLink, impact, whatIDid, image }: CaseStu
       <div className="grid md:grid-cols-[280px_1fr] gap-8 items-start">
         {/* Image */}
         {image && (
-          <div className="rounded-lg overflow-hidden border border-border/50 aspect-[4/3]">
+          <div className="rounded-lg overflow-hidden border border-border/50">
             <img 
               src={image} 
               alt={title}
-              className="w-full h-full object-cover"
+              className="w-full h-auto object-cover"
             />
           </div>
         )}
