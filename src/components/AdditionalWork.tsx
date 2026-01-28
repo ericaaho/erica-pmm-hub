@@ -1,4 +1,5 @@
 import snapsellImage from "@/assets/snapsell-app.png";
+import practiceAppImage from "@/assets/practice-app.jpg";
 interface AdditionalWorkItem {
   title: string;
   subtitle: string;
@@ -16,7 +17,7 @@ const additionalWorkItems: AdditionalWorkItem[] = [
     subtitle: "Messaging and Positioning",
     description:
       "An AI-powered app for novice sports players to improve their game. Led customer segmentation resulting in prioritization of different customer personas for MVP. Drove definition of value proposition and crafted positioning and messaging frameworks for identified target audience.",
-    image: "/placeholder.svg",
+    image: practiceAppImage,
     link: {
       text: "customer segmentation",
       url: "https://miro.com/app/board/uXjVJ7QTgG0=/?share_link_id=826969306234",
