@@ -71,14 +71,14 @@ export function AdditionalWork() {
                 key={item.title}
                 className="bg-background rounded-xl overflow-hidden border border-border/50"
               >
-                <div className="grid md:grid-cols-[280px_1fr] gap-6 md:gap-8 items-start">
+                <div className="grid md:grid-cols-[280px_1fr] gap-6 md:gap-8 items-stretch">
                   {/* Image (match Notable PMM sizing) */}
-                  <div className="rounded-lg overflow-hidden border border-border/50 max-h-[180px]">
+                  <div className="rounded-lg overflow-hidden border border-border/50 h-full">
                     <img
                       src={item.image}
                       alt={item.title}
-                      className="w-full h-full"
-                      style={{ objectFit: "cover", objectPosition: item.imagePosition || "top" }}
+                      className="w-full h-full object-cover"
+                      style={{ objectPosition: item.imagePosition || "top" }}
                     />
                   </div>
 
