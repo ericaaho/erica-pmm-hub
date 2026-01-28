@@ -1,9 +1,9 @@
 import { Linkedin, Mail } from "lucide-react";
 
 const interests = [
-  "Dance classes 💃",
-  "Reading a book at home 📚",
-  "Practicing my public speaking skills at Toastmasters 🎤",
+  "Jazz or Contemporary dance classes in Brooklyn",
+  "Coffee shops reading a book, short stories, or essays",
+  "Toastmasters practicing my public speaking skills",
 ];
 
 export function FindMeAt() {
@@ -11,10 +11,8 @@ export function FindMeAt() {
     <section className="py-16 bg-secondary/30">
       <div className="container mx-auto px-6">
         <div className="max-w-3xl mx-auto text-center">
-          <h2 className="text-2xl font-semibold text-foreground mb-8">
-            You can find me at
-          </h2>
-          
+          <h2 className="text-2xl font-semibold text-foreground mb-8">You can find me at</h2>
+
           <ul className="space-y-3 mb-10">
             {interests.map((interest) => (
               <li key={interest} className="text-muted-foreground">
