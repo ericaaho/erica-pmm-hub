@@ -105,8 +105,20 @@ export default function Index() {
 
             <CaseStudy
               title="Dave Debit Card Rewards — Positioning & Messaging"
-              titleLink="https://dave.com/cashback/terms"
-              impact="Established clear category differentiation by positioning Dave Debit Card Rewards as the only debit card rewards program offering cash back on all purchases, driving a 27% increase in debit card adoption."
+              impact={
+                <>
+                  Established clear category differentiation by positioning{" "}
+                  <a
+                    href="https://dave.com/cashback/terms"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="text-primary underline underline-offset-4 hover:text-primary/80 transition-colors"
+                  >
+                    Dave Debit Card Rewards
+                  </a>{" "}
+                  as the only debit card rewards program offering cash back on all purchases, driving a 27% increase in debit card adoption.
+                </>
+              }
               whatIDid={[
                 "Led end-to-end positioning and messaging strategy grounded in competitive and customer insight",
                 "Authored a competitive positioning one-pager analyzing incumbent rewards programs and recommending a differentiated narrative",
@@ -144,9 +156,21 @@ export default function Index() {
 
             <CaseStudy
               title="BILL Virtual Card Rewards — Sales Enablement"
-              titleLink="https://www.bill.com/product/rewards"
               image={billVirtualCardImage}
-              impact="Drove increase in 5% win rates in mid market customers by enabling sales to position virtual card rewards as a differentiated acquisition lever."
+              impact={
+                <>
+                  Drove increase in 5% win rates in mid market customers by enabling sales to position{" "}
+                  <a
+                    href="https://www.bill.com/product/rewards"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="text-primary underline underline-offset-4 hover:text-primary/80 transition-colors"
+                  >
+                    virtual card rewards
+                  </a>{" "}
+                  as a differentiated acquisition lever.
+                </>
+              }
               whatIDid={[
                 "Identified virtual card rewards as a high-impact acquisition lever by listening to sales and customers feedback",
                 "Conducted competitive analysis on competitor reward programs to create rewards positioning and messaging hierarchy",

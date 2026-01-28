@@ -1,9 +1,9 @@
 import { Linkedin, Mail } from "lucide-react";
 
 const interests = [
-  "Dance classes",
-  "Reading a book at home",
-  "Practicing my public speaking skills at Toastmasters",
+  "Dance classes 💃",
+  "Reading a book at home 📚",
+  "Practicing my public speaking skills at Toastmasters 🎤",
 ];
 
 export function FindMeAt() {
