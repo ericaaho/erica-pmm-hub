@@ -2,6 +2,7 @@ import { Layout } from "@/components/Layout";
 import { ValueCard } from "@/components/ValueCard";
 import { CompanyLogos } from "@/components/CompanyLogos";
 import { CaseStudy } from "@/components/CaseStudy";
+import { AdditionalWork } from "@/components/AdditionalWork";
 import { FindMeAt } from "@/components/FindMeAt";
 import profilePhoto from "@/assets/profile-photo.jpg";
 import divvyImage from "@/assets/divvy-ad.webp";
@@ -179,6 +180,9 @@ export default function Index() {
           </div>
         </div>
       </section>
+
+      {/* Additional PMM Work */}
+      <AdditionalWork />
 
       {/* Find Me At */}
       <FindMeAt />
