@@ -4,6 +4,8 @@ import { CompanyLogos } from "@/components/CompanyLogos";
 import { CaseStudy } from "@/components/CaseStudy";
 import { FindMeAt } from "@/components/FindMeAt";
 import profilePhoto from "@/assets/profile-photo.jpg";
+import divvyImage from "@/assets/divvy-ad.webp";
+import billVirtualCardImage from "@/assets/bill-virtual-card.webp";
 
 const values = [
   {
@@ -17,44 +19,6 @@ const values = [
   {
     title: "Trust",
     description: "Psychological safety in a team empowers everyone.",
-  },
-];
-
-const caseStudies = [
-  {
-    title: "Dave Debit Card Rewards — Positioning & Messaging",
-    impact:
-      "Established clear category differentiation by positioning Dave Debit Card Rewards as the only debit card rewards program offering cash back on all purchases, driving a 27% increase in debit card adoption.",
-    whatIDid: [
-      "Led end-to-end positioning and messaging strategy grounded in competitive and customer insight",
-      "Authored a competitive positioning one-pager analyzing incumbent rewards programs and recommending a differentiated narrative",
-      "Designed and executed an in-app painted door experiment to validate core value propositions, messaging hierarchy, and product–market fit",
-      "Built an ROI and unit economics model across multiple cash-back scenarios to align positioning with sustainable growth and revenue goals",
-      "Conducted customer interviews and surveys to diagnose comprehension gaps and refine the rewards value proposition and messaging framework",
-    ],
-  },
-  {
-    title: "BILL × Divvy — Acquisition Narrative & Customer Insights",
-    impact:
-      "Influenced strategic direction for BILL's $2.5B acquisition of Divvy by owning customer and market insights that shaped leadership narrative and decision-making.",
-    whatIDid: [
-      "Owned customer discovery to uncover core jobs-to-be-done, unmet needs, and perception of BILL's brand across segments",
-      "Defined and synthesized key customer personas emerging from distinct use cases and company sizes",
-      "Led market and competitive analysis of expense management and accounts payable platforms, including positioning, differentiation, and whitespace",
-      "Translated customer and market insights into a clear acquisition narrative via an executive one-pager and pitch deck",
-      "Presented recommendations to executive leadership, directly informing acquisition strategy and rationale",
-    ],
-  },
-  {
-    title: "BILL Virtual Card Rewards — Sales Enablement",
-    impact:
-      "Drove increase in 5% win rates in mid market customers by enabling sales to position virtual card rewards as a differentiated acquisition lever.",
-    whatIDid: [
-      "Identified virtual card rewards as a high-impact acquisition lever by listening to sales and customers feedback",
-      "Conducted competitive analysis on competitor reward programs to create rewards positioning and messaging hierarchy",
-      "Developed sales enablement assets, including battle cards, talk tracks, call scripts, and training materials, to reinforce positioning and differentiation",
-      "Led sales trainings and joined live sales calls to gather field feedback and continuously iterate on messaging and enablement",
-    ],
   },
 ];
 
@@ -138,9 +102,58 @@ export default function Index() {
                 A selection of product marketing projects where I drove measurable impact through strategic positioning, customer research, and cross-functional collaboration.
               </p>
             </div>
-            {caseStudies.map((study) => (
-              <CaseStudy key={study.title} {...study} />
-            ))}
+            
+            <CaseStudy
+              title="Dave Debit Card Rewards — Positioning & Messaging"
+              titleLink="https://dave.com/cashback/terms"
+              impact="Established clear category differentiation by positioning Dave Debit Card Rewards as the only debit card rewards program offering cash back on all purchases, driving a 27% increase in debit card adoption."
+              whatIDid={[
+                "Led end-to-end positioning and messaging strategy grounded in competitive and customer insight",
+                "Authored a competitive positioning one-pager analyzing incumbent rewards programs and recommending a differentiated narrative",
+                "Designed and executed an in-app painted door experiment to validate core value propositions, messaging hierarchy, and product–market fit",
+                "Built an ROI and unit economics model across multiple cash-back scenarios to align positioning with sustainable growth and revenue goals",
+                "Conducted customer interviews and surveys to diagnose comprehension gaps and refine the rewards value proposition and messaging framework",
+              ]}
+            />
+            
+            <CaseStudy
+              title="BILL × Divvy — Acquisition Narrative & Customer Insights"
+              image={divvyImage}
+              impact={
+                <>
+                  Influenced strategic direction for{" "}
+                  <a 
+                    href="https://techcrunch.com/2021/05/06/why-did-bill-com-pay-2-5b-for-divvy/"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="text-primary underline underline-offset-4 hover:text-primary/80 transition-colors"
+                  >
+                    BILL's $2.5B acquisition of Divvy
+                  </a>
+                  {" "}by owning customer and market insights that shaped leadership narrative and decision-making.
+                </>
+              }
+              whatIDid={[
+                "Owned customer discovery to uncover core jobs-to-be-done, unmet needs, and perception of BILL's brand across segments",
+                "Defined and synthesized key customer personas emerging from distinct use cases and company sizes",
+                "Led market and competitive analysis of expense management and accounts payable platforms, including positioning, differentiation, and whitespace",
+                "Translated customer and market insights into a clear acquisition narrative via an executive one-pager and pitch deck",
+                "Presented recommendations to executive leadership, directly informing acquisition strategy and rationale",
+              ]}
+            />
+            
+            <CaseStudy
+              title="BILL Virtual Card Rewards — Sales Enablement"
+              titleLink="https://www.bill.com/product/rewards"
+              image={billVirtualCardImage}
+              impact="Drove increase in 5% win rates in mid market customers by enabling sales to position virtual card rewards as a differentiated acquisition lever."
+              whatIDid={[
+                "Identified virtual card rewards as a high-impact acquisition lever by listening to sales and customers feedback",
+                "Conducted competitive analysis on competitor reward programs to create rewards positioning and messaging hierarchy",
+                "Developed sales enablement assets, including battle cards, talk tracks, call scripts, and training materials, to reinforce positioning and differentiation",
+                "Led sales trainings and joined live sales calls to gather field feedback and continuously iterate on messaging and enablement",
+              ]}
+            />
           </div>
         </div>
       </section>

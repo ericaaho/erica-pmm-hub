@@ -23,9 +23,7 @@ export function FindMeAt() {
             ))}
           </ul>
 
-          <p className="text-muted-foreground mb-6">OR via</p>
-
-          <div className="flex justify-center gap-6">
+          <div className="flex justify-center gap-6 mt-10">
             <a
               href="https://www.linkedin.com/in/ericaho1/"
               target="_blank"
