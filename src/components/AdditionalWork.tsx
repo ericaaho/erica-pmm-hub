@@ -3,9 +3,10 @@ import practiceAppImage from "@/assets/practice-app.png";
 interface AdditionalWorkItem {
   title: string;
   subtitle: string;
-  description: string;
+  paragraph1: string;
+  paragraph2: string;
   image: string;
-  imagePosition?: string; // e.g. "top", "center", "bottom"
+  imagePosition?: string;
   link?: {
     text: string;
     url: string;
@@ -15,9 +16,9 @@ interface AdditionalWorkItem {
 const additionalWorkItems: AdditionalWorkItem[] = [
   {
     title: "Practice App",
-    subtitle: "Messaging and Positioning",
-    description:
-      "Gemini 3 Hackathon Participant. An AI-powered app for novice sports players to improve their game. Led customer segmentation resulting in prioritization of different customer personas for MVP. Drove definition of value proposition and crafted positioning and messaging frameworks for identified target audience.",
+    subtitle: "Positioning and Messaging",
+    paragraph1: "Gemini 3 Hackathon Participant. An AI-powered app for novice sports players to improve their game.",
+    paragraph2: "Led customer segmentation resulting in prioritization of different customer personas for MVP. Drove definition of value proposition and crafted positioning and messaging frameworks for identified target audience.",
     image: practiceAppImage,
     imagePosition: "top",
     link: {
@@ -28,29 +29,29 @@ const additionalWorkItems: AdditionalWorkItem[] = [
   {
     title: "Snapsell App",
     subtitle: "Messaging and Positioning",
-    description:
-      "4th place winner in Flowgad Hackathon. An AI-powered marketplace app for casual sellers to make a few extra bucks. Developed product and messaging positioning for casual sellers through market analysis and customer feedback. Presented live the product demo and value prop for an AI-powered marketplace app.",
+    paragraph1: "4th place winner in Flowgad Hackathon. An AI-powered marketplace app for casual sellers to earn money.",
+    paragraph2: "Developed product and messaging positioning for casual sellers through market analysis and customer feedback. Presented live the product demo and value prop for an AI-powered marketplace app.",
     image: snapsellImage,
     imagePosition: "center",
   },
 ];
 
-function formatDescription(item: AdditionalWorkItem) {
-  if (!item.link) return item.description;
+function formatParagraph(text: string, link?: { text: string; url: string }) {
+  if (!link) return text;
 
-  const parts = item.description.split(item.link.text);
-  if (parts.length === 1) return item.description;
+  const parts = text.split(link.text);
+  if (parts.length === 1) return text;
 
   return (
     <>
       {parts[0]}
       <a
-        href={item.link.url}
+        href={link.url}
         target="_blank"
         rel="noopener noreferrer"
         className="text-primary underline underline-offset-4 hover:text-primary/80 transition-colors"
       >
-        {item.link.text}
+        {link.text}
       </a>
       {parts[1]}
     </>
@@ -87,7 +88,8 @@ export function AdditionalWork() {
                       <h3 className="text-xl font-semibold text-foreground">{item.title}</h3>
                       <p className="text-sm text-primary font-medium">{item.subtitle}</p>
                     </div>
-                    <p className="text-muted-foreground leading-relaxed text-sm">{formatDescription(item)}</p>
+                    <p className="text-muted-foreground leading-relaxed text-sm">{item.paragraph1}</p>
+                    <p className="text-muted-foreground leading-relaxed text-sm">{formatParagraph(item.paragraph2, item.link)}</p>
                   </div>
                 </div>
               </article>
