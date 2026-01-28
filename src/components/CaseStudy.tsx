@@ -24,14 +24,14 @@ export function CaseStudy({ title, titleLink, impact, whatIDid, image }: CaseStu
 
   return (
     <article className="py-12 border-b border-border/50 last:border-b-0">
-      <div className="grid md:grid-cols-[280px_1fr] gap-8 items-start">
+      <div className="grid md:grid-cols-[280px_1fr] gap-8 items-stretch">
         {/* Image */}
         {image && (
-          <div className="rounded-lg overflow-hidden border border-border/50">
+          <div className="rounded-lg overflow-hidden border border-border/50 h-full">
             <img 
               src={image} 
               alt={title}
-              className="w-full h-auto object-cover"
+              className="w-full h-full object-cover"
             />
           </div>
         )}
