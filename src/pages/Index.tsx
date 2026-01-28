@@ -40,22 +40,29 @@ export default function Index() {
 
             {/* Introduction */}
             <div className="space-y-6">
-              <h1 className="text-4xl md:text-5xl font-semibold text-foreground">
-                Hello there! I'm Erica
-              </h1>
+              <h1 className="text-4xl md:text-5xl font-semibold text-foreground">Hello there! I'm Erica</h1>
               <div className="space-y-4 text-muted-foreground leading-relaxed">
                 <p>
-                  I'm a fintech product leader with 7+ years of experience launching payments and card products at high-growth B2B and B2C startups. Working across both sides of the market has given me a rare vantage point: I understand not just how financial products work, but how people feel about money—and what actually motivates them to trust, adopt, and keep using a product.
+                  I'm a fintech product leader with 7+ years of experience launching payments and card products at
+                  high-growth B2B and B2C startups. Working across both sides of the market has given me a rare vantage
+                  point: I understand not just how financial products work, but how people feel about money—and what
+                  actually motivates them to trust, adopt, and keep using a product.
                 </p>
                 <p>
-                  In a market crowded with increasingly similar offerings, I focus on translating complex financial products into clear, human messaging that fits naturally into customers' lives. I believe this ability to deeply understand customers—and communicate value with precision—will be a key differentiator as AI lowers the barrier to building.
+                  In a market crowded with increasingly similar offerings, I focus on translating complex financial
+                  products into clear, human messaging that fits naturally into customers' lives. I believe this ability
+                  to deeply understand customers—and communicate value with precision—will be a key differentiator as AI
+                  lowers the barrier to building.
                 </p>
                 <p>
-                  Outside of work, I "vibe code" with friends, turning ideas into real solutions. It's where I also see firsthand how thoughtful messaging and positioning often make the difference between shipping and success.
+                  Outside of work, I vibe code with friends, where I lead thoughtful messaging and positioning often
+                  making the difference between shipping and success.
                 </p>
               </div>
               <div className="pt-4">
-                <p className="text-muted-foreground mb-2">If you'd like to chat about a project or opportunity:</p>
+                <p className="text-muted-foreground mb-2">
+                  If you'd like to chat about a project or opportunity you can reach me at:
+                </p>
                 <a
                   href="mailto:erica.sy.ho@gmail.com"
                   className="inline-flex items-center text-primary font-medium hover:underline underline-offset-4"
@@ -75,9 +82,7 @@ export default function Index() {
       <section className="py-16 bg-secondary/30">
         <div className="container mx-auto px-6">
           <div className="max-w-5xl mx-auto">
-            <h2 className="text-2xl font-semibold text-foreground mb-8 text-center">
-              My Values
-            </h2>
+            <h2 className="text-2xl font-semibold text-foreground mb-8 text-center">My Values</h2>
             <div className="grid md:grid-cols-3 gap-6">
               {values.map((value) => (
                 <ValueCard key={value.title} {...value} />
@@ -95,14 +100,13 @@ export default function Index() {
         <div className="container mx-auto px-6">
           <div className="max-w-5xl mx-auto">
             <div className="mb-12">
-              <h2 className="text-3xl md:text-4xl font-semibold text-foreground mb-4">
-                Notable PMM Work
-              </h2>
+              <h2 className="text-3xl md:text-4xl font-semibold text-foreground mb-4">Notable PMM Work</h2>
               <p className="text-lg text-muted-foreground leading-relaxed max-w-3xl">
-                A selection of product marketing projects where I drove measurable impact through strategic positioning, customer research, and cross-functional collaboration.
+                A selection of product marketing projects where I drove measurable impact through strategic positioning,
+                customer research, and cross-functional collaboration.
               </p>
             </div>
-            
+
             <CaseStudy
               title="Dave Debit Card Rewards — Positioning & Messaging"
               titleLink="https://dave.com/cashback/terms"
@@ -115,22 +119,22 @@ export default function Index() {
                 "Conducted customer interviews and surveys to diagnose comprehension gaps and refine the rewards value proposition and messaging framework",
               ]}
             />
-            
+
             <CaseStudy
               title="BILL × Divvy — Acquisition Narrative & Customer Insights"
               image={divvyImage}
               impact={
                 <>
                   Influenced strategic direction for{" "}
-                  <a 
+                  <a
                     href="https://techcrunch.com/2021/05/06/why-did-bill-com-pay-2-5b-for-divvy/"
                     target="_blank"
                     rel="noopener noreferrer"
                     className="text-primary underline underline-offset-4 hover:text-primary/80 transition-colors"
                   >
                     BILL's $2.5B acquisition of Divvy
-                  </a>
-                  {" "}by owning customer and market insights that shaped leadership narrative and decision-making.
+                  </a>{" "}
+                  by owning customer and market insights that shaped leadership narrative and decision-making.
                 </>
               }
               whatIDid={[
@@ -141,7 +145,7 @@ export default function Index() {
                 "Presented recommendations to executive leadership, directly informing acquisition strategy and rationale",
               ]}
             />
-            
+
             <CaseStudy
               title="BILL Virtual Card Rewards — Sales Enablement"
               titleLink="https://www.bill.com/product/rewards"
