@@ -5,6 +5,7 @@ interface AdditionalWorkItem {
   subtitle: string;
   description: string;
   image: string;
+  imagePosition?: string; // e.g. "top", "center", "bottom"
   link?: {
     text: string;
     url: string;
@@ -18,6 +19,7 @@ const additionalWorkItems: AdditionalWorkItem[] = [
     description:
       "Gemini 3 Hackathon Participant. An AI-powered app for novice sports players to improve their game. Led customer segmentation resulting in prioritization of different customer personas for MVP. Drove definition of value proposition and crafted positioning and messaging frameworks for identified target audience.",
     image: practiceAppImage,
+    imagePosition: "top",
     link: {
       text: "customer segmentation",
       url: "https://miro.com/app/board/uXjVJ7QTgG0=/?share_link_id=826969306234",
@@ -29,6 +31,7 @@ const additionalWorkItems: AdditionalWorkItem[] = [
     description:
       "4th place winner in Flowgad Hackathon. An AI-powered marketplace app for casual sellers to make a few extra bucks. Developed product and messaging positioning for casual sellers through market analysis and customer feedback. Presented live the product demo and value prop for an AI-powered marketplace app.",
     image: snapsellImage,
+    imagePosition: "center",
   },
 ];
 
@@ -74,7 +77,7 @@ export function AdditionalWork() {
                       src={item.image}
                       alt={item.title}
                       className="w-full h-full"
-                      style={{ objectFit: "cover", objectPosition: "top" }}
+                      style={{ objectFit: "cover", objectPosition: item.imagePosition || "top" }}
                     />
                   </div>
 
