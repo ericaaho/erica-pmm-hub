@@ -61,21 +61,31 @@ export function AdditionalWork() {
         <div className="max-w-5xl mx-auto">
           <h2 className="text-3xl md:text-4xl font-semibold text-foreground mb-10">Additional PMM Work</h2>
 
-          <div className="grid md:grid-cols-2 gap-8">
+          <div className="space-y-8">
             {additionalWorkItems.map((item) => (
-              <article key={item.title} className="bg-background rounded-xl overflow-hidden border border-border/50">
-                {/* Image */}
-                <div className="aspect-video overflow-hidden">
-                  <img src={item.image} alt={item.title} className="w-full h-full object-cover object-top" />
-                </div>
-
-                {/* Content */}
-                <div className="p-6 space-y-3">
-                  <div>
-                    <h3 className="text-xl font-semibold text-foreground">{item.title}</h3>
-                    <p className="text-sm text-primary font-medium">{item.subtitle}</p>
+              <article
+                key={item.title}
+                className="bg-background rounded-xl overflow-hidden border border-border/50"
+              >
+                <div className="grid md:grid-cols-[280px_1fr] gap-6 md:gap-8 items-stretch">
+                  {/* Image (match Notable PMM sizing) */}
+                  <div className="rounded-lg overflow-hidden border border-border/50 h-full">
+                    <img
+                      src={item.image}
+                      alt={item.title}
+                      className="w-full h-full"
+                      style={{ objectFit: "cover", objectPosition: "top" }}
+                    />
                   </div>
-                  <p className="text-muted-foreground leading-relaxed text-sm">{formatDescription(item)}</p>
+
+                  {/* Content */}
+                  <div className="p-6 md:py-6 md:pl-0 md:pr-6 space-y-3">
+                    <div>
+                      <h3 className="text-xl font-semibold text-foreground">{item.title}</h3>
+                      <p className="text-sm text-primary font-medium">{item.subtitle}</p>
+                    </div>
+                    <p className="text-muted-foreground leading-relaxed text-sm">{formatDescription(item)}</p>
+                  </div>
                 </div>
               </article>
             ))}
