@@ -1,5 +1,5 @@
 import snapsellImage from "@/assets/snapsell-app.png";
-import practiceAppImage from "@/assets/practice-app.jpg";
+import practiceAppImage from "@/assets/practice-app.png";
 interface AdditionalWorkItem {
   title: string;
   subtitle: string;
