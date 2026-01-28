@@ -70,11 +70,11 @@ export function AdditionalWork() {
                 className="bg-background rounded-xl overflow-hidden border border-border/50"
               >
                 {/* Image */}
-                <div className="aspect-video overflow-hidden">
+                <div className="aspect-video overflow-hidden bg-muted">
                   <img
                     src={item.image}
                     alt={item.title}
-                    className="w-full h-full object-cover object-top"
+                    className="w-full h-full object-contain"
                   />
                 </div>
 
