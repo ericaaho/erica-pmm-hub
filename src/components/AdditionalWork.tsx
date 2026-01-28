@@ -71,25 +71,25 @@ export function AdditionalWork() {
                 key={item.title}
                 className="bg-background rounded-xl overflow-hidden border border-border/50"
               >
-                <div className="grid md:grid-cols-[280px_1fr] gap-6 md:gap-8 items-start">
-                  {/* Image (match Notable PMM sizing) */}
-                  <div className="rounded-lg overflow-hidden border border-border/50 max-h-[180px]">
+                <div className="grid md:grid-cols-[280px_1fr] gap-6 md:gap-8 items-stretch">
+                  {/* Image (stretches to match content height) */}
+                  <div className="rounded-lg overflow-hidden border border-border/50">
                     <img
                       src={item.image}
                       alt={item.title}
-                      className="w-full h-full"
-                      style={{ objectFit: "cover", objectPosition: item.imagePosition || "top" }}
+                      className="w-full h-full object-cover"
+                      style={{ objectPosition: item.imagePosition || "top" }}
                     />
                   </div>
 
                   {/* Content */}
                   <div className="p-6 md:py-6 md:pl-0 md:pr-6 space-y-3">
                     <div>
-                      <h3 className="text-xl font-semibold text-foreground">{item.title}</h3>
-                      <p className="text-sm text-primary font-medium">{item.subtitle}</p>
+                      <h3 className="text-2xl font-semibold text-foreground">{item.title}</h3>
+                      <p className="text-lg text-primary font-medium">{item.subtitle}</p>
                     </div>
-                    <p className="text-muted-foreground leading-relaxed text-sm">{item.paragraph1}</p>
-                    <p className="text-muted-foreground leading-relaxed text-sm">{formatParagraph(item.paragraph2, item.link)}</p>
+                    <p className="text-muted-foreground leading-relaxed text-lg">{item.paragraph1}</p>
+                    <p className="text-muted-foreground leading-relaxed text-lg">{formatParagraph(item.paragraph2, item.link)}</p>
                   </div>
                 </div>
               </article>
