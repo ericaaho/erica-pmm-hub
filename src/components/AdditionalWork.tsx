@@ -1,7 +1,7 @@
 import type { ReactNode } from "react";
 
 import practiceAppImage from "@/assets/practice-app-customer-seg.png";
-import snapsellAppImage from "@/assets/snapsell-app.png";
+import snapsellAppImage from "@/assets/snapsell-listing.png";
 
 type InlineLink = {
   text: string;
