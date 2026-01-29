@@ -49,9 +49,8 @@ const additionalWorkItems: AdditionalWorkItem[] = [
     subtitle: "Positioning and Messaging",
     image: snapsellAppImage,
     paragraph1:
-      "An AI-powered marketplace app for casual sellers to make money."
-
-    paragraph2: "Developed product and messaging positioning for casual sellers through market analysis and customer feedback. Presented live product demo and value prop in front of an audience of 100+."
+      "An AI-powered marketplace app for casual sellers to make money.",
+    paragraph2: "Developed product and messaging positioning for casual sellers through market analysis and customer feedback. Presented live product demo and value prop in front of an audience of 100+.",
     hackathon: {
       name: "Flowgad Hackathon",
       status: "completed",
