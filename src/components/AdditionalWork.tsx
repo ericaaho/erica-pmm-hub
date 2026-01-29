@@ -1,3 +1,93 @@
+import type { ReactNode } from "react";
+
+import practiceAppImage from "@/assets/practice-app.png";
+import snapsellAppImage from "@/assets/snapsell-app.png";
+
+type InlineLink = {
+  text: string;
+  href: string;
+};
+
+type HackathonMeta = {
+  name: string;
+  status: "ongoing" | "completed";
+  place?: string;
+};
+
+type AdditionalWorkItem = {
+  title: string;
+  subtitle: string;
+  image: string;
+  paragraph1: string;
+  paragraph2: string;
+  link?: InlineLink;
+  hackathon?: HackathonMeta;
+};
+
+const additionalWorkItems: AdditionalWorkItem[] = [
+  {
+    title: "Practice App",
+    subtitle: "Product marketing (0→1)",
+    image: practiceAppImage,
+    paragraph1:
+      "Led end-to-end go-to-market planning and positioning for a new internal practice app, aligning stakeholders across product, design, and operations.",
+    paragraph2:
+      "Documented user segments and messaging in the Miro board.",
+    link: {
+      text: "Miro board",
+      href: "https://miro.com",
+    },
+  },
+  {
+    title: "Snapsell App",
+    subtitle: "Growth experiments + launch support",
+    image: snapsellAppImage,
+    paragraph1:
+      "Supported launch messaging and in-product education, focusing on clarity of value and reducing time-to-first-success.",
+    paragraph2:
+      "Captured learnings and experiment outcomes in the project doc.",
+  },
+];
+
+function formatParagraph(text: string, link?: InlineLink): ReactNode {
+  if (!link) return text;
+
+  const idx = text.indexOf(link.text);
+  if (idx === -1) {
+    return (
+      <>
+        {text}{" "}
+        <a
+          className="underline underline-offset-4 text-primary hover:opacity-80"
+          href={link.href}
+          target="_blank"
+          rel="noreferrer"
+        >
+          {link.text}
+        </a>
+      </>
+    );
+  }
+
+  const before = text.slice(0, idx);
+  const after = text.slice(idx + link.text.length);
+
+  return (
+    <>
+      {before}
+      <a
+        className="underline underline-offset-4 text-primary hover:opacity-80"
+        href={link.href}
+        target="_blank"
+        rel="noreferrer"
+      >
+        {link.text}
+      </a>
+      {after}
+    </>
+  );
+}
+
 export function AdditionalWork() {
   return (
     <section className="py-16 md:py-20">
