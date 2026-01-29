@@ -10,7 +10,7 @@ interface AdditionalWorkItem {
   hackathon?: {
     name: string;
     status: "ongoing" | "completed";
-    place?: string; // optional for completed hackathons
+    place?: string;
   };
   link?: {
     text: string;
@@ -80,8 +80,8 @@ export function AdditionalWork() {
         <div className="max-w-6xl mx-auto">
           <h2 className="text-3xl md:text-4xl font-semibold text-foreground mb-10">Additional PMM Work</h2>
 
-          {/* 2-up grid */}
-          <div className="grid gap-8 md:grid-cols-2">
+          {/* 2-up grid with fixed card width matching Notable PMM Work */}
+          <div className="grid gap-8 justify-center md:grid-cols-[repeat(2,minmax(0,280px))]">
             {additionalWorkItems.map((item) => (
               <article
                 key={item.title}
@@ -91,10 +91,10 @@ export function AdditionalWork() {
                 <div className="relative aspect-[4/3] w-full overflow-hidden border-b border-border/50">
                   <img src={item.image} alt={item.title} className="w-full h-full object-cover" />
 
-                  {/* Hackathon badge */}
+                  {/* Hackathon badge (scaled for 280px wide cards) */}
                   {item.hackathon && (
                     <span
-                      className={`absolute top-3 left-3 text-xs font-semibold px-2 py-1 rounded-md shadow-md ${
+                      className={`absolute top-2 left-2 text-[10px] font-semibold px-1.5 py-0.5 rounded-md shadow-md ${
                         item.hackathon.status === "ongoing"
                           ? "bg-blue-500 text-white animate-pulse"
                           : "bg-yellow-500 text-white"
