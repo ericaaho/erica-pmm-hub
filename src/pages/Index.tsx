@@ -6,7 +6,6 @@ import { AdditionalWork } from "@/components/AdditionalWork";
 import { FindMeAt } from "@/components/FindMeAt";
 import profilePhoto from "@/assets/profile-photo.jpg";
 import divvyImage from "@/assets/acquisition.png";
-import billBattlecardImage from "@/assets/bill-battlecard.png";
 
 const values = [
   {
@@ -156,7 +155,6 @@ export default function Index() {
 
             <CaseStudy
               title="BILL Virtual Card Rewards — Sales Enablement"
-              image={billBattlecardImage}
               impact={
                 <>
                   Drove 5% increase in win rates and unlocked mid market customers by enabling sales to position{" "}
@@ -182,11 +180,18 @@ export default function Index() {
         </div>
       </section>
 
-      {/* Additional PMM Work */}
-      <AdditionalWork />
+      {/* ----------------- */}
+      {/* Divider + Additional PMM Work */}
+      {/* ----------------- */}
+      <section className="py-16 md:py-20">
+        <div className="container mx-auto px-6">
+          <div className="max-w-5xl mx-auto">
+            <hr className="border-t border-border/50 mb-10" />
+            <AdditionalWork />
+          </div>
+        </div>
+      </section>
 
       {/* Find Me At */}
-      <FindMeAt />
-    </Layout>
-  );
-}
+      <Find
+
