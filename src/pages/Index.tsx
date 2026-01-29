@@ -27,7 +27,7 @@ export default function Index() {
   return (
     <Layout>
       {/* Hero Section */}
-      <section className="py-16 md:py-24">
+      <section className="py-16 md:py-20">
         <div className="container mx-auto px-6">
           <div className="grid md:grid-cols-2 gap-12 items-center max-w-5xl mx-auto">
             {/* Profile Photo */}
@@ -80,7 +80,7 @@ export default function Index() {
       </section>
 
       {/* Values Section */}
-      <section className="py-16 bg-secondary/30">
+      <section className="py-16 md:py-20 bg-secondary/30">
         <div className="container mx-auto px-6">
           <div className="max-w-5xl mx-auto">
             <h2 className="text-2xl font-semibold text-foreground mb-8 text-center">My Values</h2>
