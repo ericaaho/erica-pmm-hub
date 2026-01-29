@@ -6,7 +6,6 @@ import { AdditionalWork } from "@/components/AdditionalWork";
 import { FindMeAt } from "@/components/FindMeAt";
 import profilePhoto from "@/assets/profile-photo.jpg";
 import divvyImage from "@/assets/acquisition.png";
-import billVirtualCardImage from "@/assets/virtual-card-handdrawn.png";
 
 const values = [
   {
@@ -156,7 +155,6 @@ export default function Index() {
 
             <CaseStudy
               title="BILL Virtual Card Rewards — Sales Enablement"
-              image={billVirtualCardImage}
               impact={
                 <>
                   Drove 5% increase in win rates and unlocked mid market customers by enabling sales to position{" "}
