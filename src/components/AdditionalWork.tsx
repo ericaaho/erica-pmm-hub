@@ -1,76 +1,119 @@
-import practiceAppImage from "@/assets/practice-app-customer-seg.png";
-import snapsellImage from "@/assets/snapsell-listing.png";
+import type { ReactNode } from "react";
 
-interface AdditionalWorkItem {
+import practiceAppImage from "@/assets/practice-app-customer-seg.png";
+import snapsellAppImage from "@/assets/snapsell-listing.png";
+
+type InlineLink = {
+  text: string;
+  href: string;
+};
+
+type HackathonMeta = {
+  name: string;
+  status: "ongoing" | "completed";
+  place?: string;
+};
+
+type AdditionalWorkItem = {
   title: string;
   subtitle: string;
+  image: string;
   paragraph1: string;
   paragraph2: string;
-  image: string;
-  link?: { text: string; url: string };
-  hackathon?: { name: string; status: "ongoing" | "completed"; place?: string };
-}
+  link?: InlineLink;
+  hackathon?: HackathonMeta;
+};
 
+// -----------------
+// Items with Hackathon info
+// -----------------
 const additionalWorkItems: AdditionalWorkItem[] = [
   {
     title: "Practice App",
-    subtitle: "AI-Powered Customer Segmentation Tool",
-    paragraph1:
-      "Built an AI-powered customer segmentation tool that helps small business owners identify their most valuable customer segments and tailor their marketing strategies accordingly.",
-    paragraph2:
-      "This project won 2nd place at the Anthropic AI Hackathon, demonstrating the power of combining product marketing expertise with AI capabilities.",
+    subtitle: "Positioning and Messaging",
     image: practiceAppImage,
-    hackathon: { name: "Anthropic AI Hackathon", status: "completed", place: "2nd Place" },
+    paragraph1:
+      "An AI-powered app for novice sports players to improve their game.",
+    paragraph2: "Led customer segmentation brainstorm resulting in prioritization of different customer personas for MVP. Drove definition of value proposition and crafted positioning and messaging frameworks for identified target audience.",
+    link: {
+      text: "customer segmentation brainstorm",
+      href: "https://miro.com",
+    },
+    hackathon: {
+      name: "Gemini 3 Hackathon",
+      status: "ongoing", // in progress
+    },
   },
   {
-    title: "Snapsell App",
-    subtitle: "AI Marketplace Listing Generator",
+    title: "SnapSell App",
+    subtitle: "Positioning and Messaging",
+    image: snapsellAppImage,
     paragraph1:
-      "Created an AI-powered tool that generates optimized marketplace listings from product photos, helping sellers create compelling descriptions that drive conversions.",
-    paragraph2:
-      "Currently in development as part of an ongoing hackathon project, focusing on making e-commerce selling more accessible.",
-    image: snapsellImage,
-    hackathon: { name: "Vibe Coding Hackathon", status: "ongoing" },
+      "An AI-powered marketplace app for casual sellers to make money.",
+    paragraph2: "Developed product and messaging positioning for casual sellers through market analysis and customer feedback. Presented live product demo and value prop in front of an audience of 100+.",
+    hackathon: {
+      name: "Flowgad Hackathon",
+      status: "completed",
+      place: "4th Place", // completed
+    },
   },
 ];
 
-function formatParagraph(text: string, link?: { text: string; url: string }) {
+// -----------------
+// Format paragraph with optional inline link
+// -----------------
+function formatParagraph(text: string, link?: InlineLink): ReactNode {
   if (!link) return text;
 
-  const parts = text.split(link.text);
-  if (parts.length === 1) return text;
+  const idx = text.indexOf(link.text);
+  if (idx === -1) {
+    return (
+      <>
+        {text}{" "}
+        <a
+          className="underline underline-offset-4 text-primary hover:opacity-80"
+          href={link.href}
+          target="_blank"
+          rel="noreferrer"
+        >
+          {link.text}
+        </a>
+      </>
+    );
+  }
+
+  const before = text.slice(0, idx);
+  const after = text.slice(idx + link.text.length);
 
   return (
     <>
-      {parts[0]}
+      {before}
       <a
-        href={link.url}
-        className="text-primary underline underline-offset-4 hover:text-primary/80"
+        className="underline underline-offset-4 text-primary hover:opacity-80"
+        href={link.href}
         target="_blank"
-        rel="noopener noreferrer"
+        rel="noreferrer"
       >
         {link.text}
       </a>
-      {parts[1]}
+      {after}
     </>
   );
 }
 
+// -----------------
+// Component
+// -----------------
 export function AdditionalWork() {
   return (
-    <section className="pt-8 pb-16 md:pt-10 md:pb-20 bg-gray-50">
+    <section className="pt-8 pb-16 md:pt-10 md:pb-20">
       <div className="container mx-auto px-6">
         <div className="max-w-5xl mx-auto">
           <h2 className="text-3xl md:text-4xl font-semibold text-foreground mb-10">Additional PMM Work</h2>
 
           <div className="space-y-8">
             {additionalWorkItems.map((item) => (
-              <article
-                key={item.title}
-                className="bg-background rounded-xl border border-border/50 overflow-hidden
-                           shadow-md transform transition-transform duration-300
-                           hover:scale-105 hover:shadow-lg"
-              >
+              <article key={item.title} className="bg-background rounded-xl border border-border/50 overflow-hidden">
                 <div className="grid md:grid-cols-[280px_1fr] gap-8 items-stretch">
                   {/* Image column */}
                   <div className="relative rounded-lg overflow-hidden border border-border/50 flex-shrink-0 w-[280px] h-[210px]">

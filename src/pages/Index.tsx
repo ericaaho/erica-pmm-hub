@@ -198,6 +198,8 @@ export default function Index() {
             viewport={{ once: true, amount: 0.2 }}
             transition={{ duration: 0.6, ease: "easeOut" }}
           >
+            {/* Gradient divider */}
+            <hr className="border-t-2 border-gradient-to-r from-transparent via-border/50 to-transparent mb-6" />
             <AdditionalWork />
           </motion.div>
         </div>
