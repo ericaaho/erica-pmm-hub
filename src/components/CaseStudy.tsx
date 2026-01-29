@@ -37,7 +37,7 @@ export function CaseStudy({ title, titleLink, impact, whatIDid, image }: CaseStu
         </div>
 
         {/* Content */}
-        <div className={`space-y-6`}>
+        <div className="space-y-6">
           <h3 className="text-2xl font-semibold text-foreground">{TitleContent}</h3>
 
           <div>
@@ -49,8 +49,9 @@ export function CaseStudy({ title, titleLink, impact, whatIDid, image }: CaseStu
             <h4 className="text-sm font-semibold text-primary uppercase tracking-wide mb-3">What I Did</h4>
             <ul className="space-y-2">
               {whatIDid.map((item, index) => (
-                <li key={index} className="text-muted-foreground leading-relaxed flex">
-                  <span className="text-primary mr-3 mt-1.5 flex-shrink-0">•</span>
+                <li key={index} className="text-muted-foreground leading-relaxed flex items-start md:items-center">
+                  {/* Centered bullet */}
+                  <span className="text-primary mr-3 flex-shrink-0">•</span>
                   <span>{item}</span>
                 </li>
               ))}
