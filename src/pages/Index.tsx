@@ -115,7 +115,8 @@ export default function Index() {
                   >
                     Dave Debit Card Rewards
                   </a>{" "}
-                  as the only debit card rewards program offering cash back on all purchases, driving a 27% increase in debit card adoption.
+                  as the only debit card rewards program offering cash back on all purchases, driving a 27% increase in
+                  debit card adoption.
                 </>
               }
               whatIDid={[
@@ -158,7 +159,7 @@ export default function Index() {
               image={billVirtualCardImage}
               impact={
                 <>
-                  Drove increase in 5% win rates in mid market customers by enabling sales to position{" "}
+                  Drove 5% increase in win rates and unlocked mid market customers by enabling sales to position{" "}
                   <a
                     href="https://www.bill.com/product/rewards"
                     target="_blank"
