@@ -23,7 +23,7 @@ export function CaseStudy({ title, titleLink, impact, whatIDid, image }: CaseStu
   );
 
   return (
-    <article className="py-12 border-b border-border/50 last:border-b-0">
+    <article className="py-8 border-b border-border/50 last:border-b-0 last:pb-0">
       <div className="grid md:grid-cols-[300px_1fr] gap-8 items-start">
         {/* Image or Placeholder */}
         <div className="w-full max-w-[300px]">
