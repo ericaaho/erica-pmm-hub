@@ -1,3 +1,61 @@
+import practiceAppImage from "@/assets/practice-app-customer-seg.png";
+import snapsellImage from "@/assets/snapsell-listing.png";
+
+interface AdditionalWorkItem {
+  title: string;
+  subtitle: string;
+  paragraph1: string;
+  paragraph2: string;
+  image: string;
+  link?: { text: string; url: string };
+  hackathon?: { name: string; status: "ongoing" | "completed"; place?: string };
+}
+
+const additionalWorkItems: AdditionalWorkItem[] = [
+  {
+    title: "Practice App",
+    subtitle: "AI-Powered Customer Segmentation Tool",
+    paragraph1:
+      "Built an AI-powered customer segmentation tool that helps small business owners identify their most valuable customer segments and tailor their marketing strategies accordingly.",
+    paragraph2:
+      "This project won 2nd place at the Anthropic AI Hackathon, demonstrating the power of combining product marketing expertise with AI capabilities.",
+    image: practiceAppImage,
+    hackathon: { name: "Anthropic AI Hackathon", status: "completed", place: "2nd Place" },
+  },
+  {
+    title: "Snapsell App",
+    subtitle: "AI Marketplace Listing Generator",
+    paragraph1:
+      "Created an AI-powered tool that generates optimized marketplace listings from product photos, helping sellers create compelling descriptions that drive conversions.",
+    paragraph2:
+      "Currently in development as part of an ongoing hackathon project, focusing on making e-commerce selling more accessible.",
+    image: snapsellImage,
+    hackathon: { name: "Vibe Coding Hackathon", status: "ongoing" },
+  },
+];
+
+function formatParagraph(text: string, link?: { text: string; url: string }) {
+  if (!link) return text;
+
+  const parts = text.split(link.text);
+  if (parts.length === 1) return text;
+
+  return (
+    <>
+      {parts[0]}
+      <a
+        href={link.url}
+        className="text-primary underline underline-offset-4 hover:text-primary/80"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        {link.text}
+      </a>
+      {parts[1]}
+    </>
+  );
+}
+
 export function AdditionalWork() {
   return (
     <section className="pt-8 pb-16 md:pt-10 md:pb-20 bg-gray-50">
