@@ -11,7 +11,7 @@ export function Layout({ children }: LayoutProps) {
       <main className="flex-1">{children}</main>
       <footer className="border-t border-border/50 py-8">
         <div className="container mx-auto px-6 text-center text-sm text-muted-foreground">
-          © {new Date().getFullYear()} Erica. All rights reserved.
+          © {new Date().getFullYear()} Erica Ho. All rights reserved.
         </div>
       </footer>
     </div>
