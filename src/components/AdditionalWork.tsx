@@ -30,7 +30,7 @@ type AdditionalWorkItem = {
 const additionalWorkItems: AdditionalWorkItem[] = [
   {
     title: "Practice App",
-    subtitle: "Product marketing (0→1)",
+    subtitle: "Positioning and Messaging",
     image: practiceAppImage,
     paragraph1:
       "Led end-to-end go-to-market planning and positioning for a new internal practice app, aligning stakeholders across product, design, and operations.",
@@ -45,8 +45,8 @@ const additionalWorkItems: AdditionalWorkItem[] = [
     },
   },
   {
-    title: "Snapsell App",
-    subtitle: "Growth experiments + launch support",
+    title: "SnapSell App",
+    subtitle: "Positioning and Messaging",
     image: snapsellAppImage,
     paragraph1:
       "Supported launch messaging and in-product education, focusing on clarity of value and reducing time-to-first-success.",
