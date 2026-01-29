@@ -105,7 +105,7 @@ export default function Index() {
       </motion.div>
 
       {/* Notable PMM Work */}
-      <section className="py-16 md:py-20 bg-white">
+      <section className="pt-16 md:pt-20 pb-8 bg-white">
         <div className="container mx-auto px-6">
           <motion.div
             className="max-w-5xl mx-auto"
