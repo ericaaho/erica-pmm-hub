@@ -6,6 +6,7 @@ import { AdditionalWork } from "@/components/AdditionalWork";
 import { FindMeAt } from "@/components/FindMeAt";
 import profilePhoto from "@/assets/profile-photo.jpg";
 import divvyImage from "@/assets/acquisition.png";
+import battlecardImage from "@/assets/bill-battlecard.png";
 
 // Values
 const values = [
@@ -76,11 +77,59 @@ export default function Index() {
       </section>
 
       {/* Values Section */}
-      <section className="py-16 md:py-20 bg-gray-50">
+      <section className="py-16 md:py-20 bg-muted">
         <div className="container mx-auto px-6">
           <div className={`max-w-5xl mx-auto ${slideInClass}`}>
             <h2 className="text-2xl md:text-3xl font-semibold text-foreground mb-8 text-center">My Values</h2>
             <div className="grid md:grid-cols-3 gap-6">
               {values.map((value) => (
-                <ValueCard key={value.title} {...value
+                <ValueCard key={value.title} {...value} />
+              ))}
+            </div>
+          </div>
+        </div>
+      </section>
 
+      {/* Company Logos */}
+      <CompanyLogos />
+
+      {/* Notable PMM Work */}
+      <section className="py-16 md:py-20 bg-white">
+        <div className="container mx-auto px-6">
+          <div className={`max-w-5xl mx-auto ${slideInClass}`}>
+            <h2 className="text-2xl md:text-3xl font-semibold text-foreground mb-12 text-center">Notable PMM Work</h2>
+            <div className="space-y-0 divide-y divide-border/50">
+              <CaseStudy
+                title="BILL × Divvy acquisition"
+                titleLink="https://www.bill.com/blog/divvy-joins-bill"
+                impact="Crafted unified positioning that brought together BILL's AP automation and Divvy's expense management—helping transition 2.4M+ customers to the new brand identity."
+                whatIDid={[
+                  "Developed unified brand positioning framework",
+                  "Created customer communication strategy for the transition",
+                  "Collaborated with cross-functional teams on messaging alignment"
+                ]}
+                image={divvyImage}
+              />
+              <CaseStudy
+                title="BILL Virtual Card Rewards"
+                impact="Built the product marketing strategy for BILL's virtual card cashback program, creating sales enablement materials and competitive battlecards."
+                whatIDid={[
+                  "Developed competitive battlecards for sales team enablement",
+                  "Created positioning against established market players",
+                  "Built product marketing strategy for cashback program launch"
+                ]}
+                image={battlecardImage}
+              />
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Additional Work */}
+      <AdditionalWork />
+
+      {/* Find Me At */}
+      <FindMeAt />
+    </Layout>
+  );
+}
