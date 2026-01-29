@@ -24,6 +24,9 @@ type AdditionalWorkItem = {
   hackathon?: HackathonMeta;
 };
 
+// -----------------
+// Items with Hackathon info
+// -----------------
 const additionalWorkItems: AdditionalWorkItem[] = [
   {
     title: "Practice App",
@@ -31,11 +34,14 @@ const additionalWorkItems: AdditionalWorkItem[] = [
     image: practiceAppImage,
     paragraph1:
       "Led end-to-end go-to-market planning and positioning for a new internal practice app, aligning stakeholders across product, design, and operations.",
-    paragraph2:
-      "Documented user segments and messaging in the Miro board.",
+    paragraph2: "Documented user segments and messaging in the Miro board.",
     link: {
       text: "Miro board",
       href: "https://miro.com",
+    },
+    hackathon: {
+      name: "Gemini 3 Hackathon",
+      status: "ongoing", // in progress
     },
   },
   {
@@ -44,11 +50,18 @@ const additionalWorkItems: AdditionalWorkItem[] = [
     image: snapsellAppImage,
     paragraph1:
       "Supported launch messaging and in-product education, focusing on clarity of value and reducing time-to-first-success.",
-    paragraph2:
-      "Captured learnings and experiment outcomes in the project doc.",
+    paragraph2: "Captured learnings and experiment outcomes in the project doc.",
+    hackathon: {
+      name: "Flowgad Hackathon",
+      status: "completed",
+      place: "4th Place", // completed
+    },
   },
 ];
 
+// -----------------
+// Format paragraph with optional inline link
+// -----------------
 function formatParagraph(text: string, link?: InlineLink): ReactNode {
   if (!link) return text;
 
@@ -88,11 +101,13 @@ function formatParagraph(text: string, link?: InlineLink): ReactNode {
   );
 }
 
+// -----------------
+// Component
+// -----------------
 export function AdditionalWork() {
   return (
     <section className="py-16 md:py-20">
       <div className="container mx-auto px-6">
-        {/* Match Notable PMM Work max width */}
         <div className="max-w-5xl mx-auto">
           <h2 className="text-3xl md:text-4xl font-semibold text-foreground mb-10">Additional PMM Work</h2>
 
@@ -101,7 +116,7 @@ export function AdditionalWork() {
               <article key={item.title} className="bg-background rounded-xl border border-border/50 overflow-hidden">
                 <div className="grid md:grid-cols-[280px_1fr] gap-8 items-stretch">
                   {/* Image column */}
-                  <div className="relative rounded-lg overflow-hidden border border-border/50 h-full">
+                  <div className="relative rounded-lg overflow-hidden border border-border/50 flex-shrink-0 w-[280px] h-[210px]">
                     <img src={item.image} alt={item.title} className="w-full h-full object-cover" />
 
                     {/* Hackathon badge */}
