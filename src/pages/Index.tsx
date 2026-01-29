@@ -193,5 +193,9 @@ export default function Index() {
       </section>
 
       {/* Find Me At */}
-      <Find
+      <FindMeAt />
+    </Layout>
+  );
+}
+
 
