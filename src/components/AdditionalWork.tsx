@@ -152,5 +152,14 @@ export function AdditionalWork() {
                   {item.paragraph1}
                 </p>
 
-
-
+                <p className="text-muted-foreground text-sm leading-relaxed">
+                  {formatParagraph(item.paragraph2, item.link)}
+                </p>
+              </div>
+            </div>
+          </article>
+        ))}
+      </div>
+    </div>
+  );
+}
