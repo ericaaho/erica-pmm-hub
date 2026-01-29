@@ -8,7 +8,7 @@ const interests = [
 
 export function FindMeAt() {
   return (
-    <section className="py-16 bg-secondary/30">
+    <section className="py-16 md:py-20 bg-secondary/30">
       <div className="container mx-auto px-6">
         <div className="max-w-3xl mx-auto text-center">
           <h2 className="text-2xl font-semibold text-foreground mb-8">You can find me at</h2>

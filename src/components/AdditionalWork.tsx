@@ -106,7 +106,7 @@ function formatParagraph(text: string, link?: InlineLink): ReactNode {
 // -----------------
 export function AdditionalWork() {
   return (
-    <section className="pt-6 pb-16 md:pt-8 md:pb-20">
+    <section className="py-16 md:py-20">
       <div className="container mx-auto px-6">
         <div className="max-w-5xl mx-auto">
           <h2 className="text-3xl md:text-4xl font-semibold text-foreground mb-10">Additional PMM Work</h2>
