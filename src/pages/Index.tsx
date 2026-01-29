@@ -5,7 +5,7 @@ import { CaseStudy } from "@/components/CaseStudy";
 import { AdditionalWork } from "@/components/AdditionalWork";
 import { FindMeAt } from "@/components/FindMeAt";
 import profilePhoto from "@/assets/profile-photo.jpg";
-import divvyImage from "@/assets/divvy-ad.webp";
+import divvyImage from "@/assets/acquisition.png";
 import billVirtualCardImage from "@/assets/virtual-card-handdrawn.png";
 
 const values = [
