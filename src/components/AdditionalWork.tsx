@@ -32,29 +32,29 @@ const additionalWorkItems: AdditionalWorkItem[] = [
     title: "Practice App",
     subtitle: "Positioning and Messaging",
     image: practiceAppImage,
-    paragraph1:
-      "An AI-powered app for novice sports players to improve their game.",
-    paragraph2: "Led customer segmentation brainstorm resulting in prioritization of different customer personas for MVP. Drove definition of value proposition and crafted positioning and messaging frameworks for identified target audience.",
+    paragraph1: "An AI-powered app for novice sports players to improve their game.",
+    paragraph2:
+      "Led customer segmentation brainstorm resulting in prioritization of different customer personas for MVP. Drove definition of value proposition and crafted positioning and messaging frameworks for identified target audience.",
     link: {
       text: "customer segmentation brainstorm",
       href: "https://miro.com",
     },
     hackathon: {
       name: "Gemini 3 Hackathon",
-      status: "ongoing", // in progress
+      status: "ongoing",
     },
   },
   {
     title: "SnapSell App",
     subtitle: "Positioning and Messaging",
     image: snapsellAppImage,
-    paragraph1:
-      "An AI-powered marketplace app for casual sellers to make money.",
-    paragraph2: "Developed product and messaging positioning for casual sellers through market analysis and customer feedback. Presented live product demo and value prop in front of an audience of 100+.",
+    paragraph1: "An AI-powered marketplace app for casual sellers to make money.",
+    paragraph2:
+      "Developed product and messaging positioning for casual sellers through market analysis and customer feedback. Presented live product demo and value prop in front of an audience of 100+.",
     hackathon: {
       name: "Flowgad Hackathon",
       status: "completed",
-      place: "4th Place", // completed
+      place: "4th Place",
     },
   },
 ];
@@ -118,27 +118,29 @@ export function AdditionalWork() {
                   {/* Image column */}
                   <div className="relative rounded-lg overflow-hidden border border-border/50 flex-shrink-0 w-[280px] h-[210px]">
                     <img src={item.image} alt={item.title} className="w-full h-full object-cover" />
-
-                    {/* Hackathon badge */}
-                    {item.hackathon && (
-                      <span
-                        className={`absolute top-2 left-2 text-[10px] font-semibold px-1.5 py-0.5 rounded-md shadow-md ${
-                          item.hackathon.status === "ongoing"
-                            ? "bg-blue-500 text-white animate-pulse"
-                            : "bg-yellow-500 text-white"
-                        }`}
-                      >
-                        {item.hackathon.status === "ongoing"
-                          ? `${item.hackathon.name} • In Progress`
-                          : `${item.hackathon.name} • ${item.hackathon.place || "Completed"}`}
-                      </span>
-                    )}
                   </div>
 
                   {/* Content column */}
                   <div className="p-6 md:py-6 md:pl-0 md:pr-6 space-y-3">
-                    <div>
-                      <h3 className="text-xl font-semibold text-foreground">{item.title}</h3>
+                    <div className="space-y-1">
+                      <div className="flex items-center gap-2 flex-wrap">
+                        <h3 className="text-xl font-semibold text-foreground">{item.title}</h3>
+
+                        {item.hackathon && (
+                          <span
+                            className={`text-[10px] font-semibold px-2 py-0.5 rounded-md shadow-sm whitespace-nowrap ${
+                              item.hackathon.status === "ongoing"
+                                ? "bg-blue-500 text-white animate-pulse"
+                                : "bg-yellow-500 text-white"
+                            }`}
+                          >
+                            {item.hackathon.status === "ongoing"
+                              ? `${item.hackathon.name} • In Progress`
+                              : `${item.hackathon.name} • ${item.hackathon.place || "Completed"}`}
+                          </span>
+                        )}
+                      </div>
+
                       <p className="text-sm text-primary font-medium">{item.subtitle}</p>
                     </div>
 
