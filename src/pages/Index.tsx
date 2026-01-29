@@ -51,8 +51,8 @@ export default function Index() {
                   lowers the barrier to building.
                 </p>
                 <p>
-                  Outside of work, I vibe code with friends, where I lead thoughtful messaging and positioning often
-                  making the difference between shipping and success.
+                  Outside of work, I vibe code with friends, where I lead customer segmentation and craft thoughtful
+                  messaging as a differentiator for success.
                 </p>
               </div>
               <div className="pt-4">
@@ -133,10 +133,10 @@ export default function Index() {
               }
               whatIDid={[
                 "Led end-to-end positioning and messaging strategy grounded in competitive and customer insight",
-                "Authored a competitive one-pager analyzing incumbent rewards programs to recommend a differentiated positioning",
-                "Designed and executed an in-app painted door experiment to validate core value propositions, messaging hierarchy, and product–market fit",
-                "Built an ROI and unit economics model across multiple cash-back scenarios to align positioning with sustainable growth and revenue goals",
-                "Conducted customer interviews and surveys to diagnose comprehension gaps and refine the rewards value proposition and messaging framework",
+                "Authored a competitive positioning one-pager analyzing incumbent rewards programs",
+                "Designed and executed an in-app painted door experiment to validate core value propositions",
+                "Built an ROI and unit economics model across multiple cash-back scenarios",
+                "Conducted customer interviews and surveys to refine rewards value proposition",
               ]}
             />
 
@@ -156,11 +156,11 @@ export default function Index() {
                 </>
               }
               whatIDid={[
-                "Owned customer discovery to uncover core jobs-to-be-done, unmet needs, and perception of BILL’s brand across segments",
-                "Defined and synthesized key customer personas emerging from distinct use cases and company sizes",
-                "Led market and competitive analysis of expense management and accounts payable platforms, including positioning, differentiation, and whitespace",
-                "Translated customer and market insights into a clear acquisition narrative via an executive one-pager and pitch deck",
-                "Presented recommendations to executive leadership, directly informing acquisition strategy and rationale",
+                "Owned customer discovery to uncover core jobs-to-be-done",
+                "Defined key customer personas emerging from distinct use cases",
+                "Led market and competitive analysis of expense management platforms",
+                "Translated insights into a clear acquisition narrative via an executive one-pager",
+                "Presented recommendations to executive leadership informing acquisition strategy",
               ]}
             />
 
@@ -180,10 +180,10 @@ export default function Index() {
                 </>
               }
               whatIDid={[
-                "Identified virtual card rewards as a high-impact acquisition lever by listening to sales and customers feedback ",
-                "Conducted competitive analysis on competitor reward programs to create rewards positioning and messaging hierarchy ",
-                "Developed sales enablement assets, including battle cards, talk tracks, call scripts, and training materials, to reinforce positioning and differentiation",
-                "Led sales trainings and joined live sales calls to gather field feedback and continuously iterate on messaging and enablement",
+                "Identified virtual card rewards as a high-impact acquisition lever",
+                "Conducted competitive analysis on competitor reward programs",
+                "Developed sales enablement assets including battle cards, talk tracks, and scripts",
+                "Led sales trainings and joined live calls to iterate messaging and enablement",
               ]}
             />
           </motion.div>
