@@ -1,3 +1,92 @@
+import type { ReactNode } from "react";
+
+import practiceAppImage from "@/assets/practice-app.png";
+import snapsellAppImage from "@/assets/snapsell-app.png";
+
+type InlineLink = {
+  text: string;
+  url: string;
+};
+
+type Hackathon = {
+  name: string;
+  status: "ongoing" | "completed";
+  place?: string;
+};
+
+type AdditionalWorkItem = {
+  title: string;
+  subtitle: string;
+  image: string;
+  paragraph1: string;
+  paragraph2: string;
+  link?: InlineLink;
+  hackathon?: Hackathon;
+};
+
+const additionalWorkItems: AdditionalWorkItem[] = [
+  {
+    title: "Practice App",
+    subtitle: "Product marketing work",
+    image: practiceAppImage,
+    paragraph1:
+      "Selected product marketing deliverables spanning positioning, messaging, and go-to-market materials.",
+    paragraph2:
+      "Highlights include customer insights synthesis and collateral used to support launch planning and enablement.",
+  },
+  {
+    title: "Snapsell App",
+    subtitle: "Product marketing work",
+    image: snapsellAppImage,
+    paragraph1:
+      "Selected product marketing work across experimentation, launch support, and product storytelling.",
+    paragraph2:
+      "Deliverables included market framing and messaging exploration to clarify value for target users.",
+    hackathon: {
+      name: "Hackathon",
+      status: "ongoing",
+    },
+  },
+];
+
+function formatParagraph(text: string, link?: InlineLink): ReactNode {
+  if (!link) return text;
+
+  const idx = text.indexOf(link.text);
+  if (idx === -1) {
+    return (
+      <>
+        {text}{" "}
+        <a
+          className="underline underline-offset-4 text-primary"
+          href={link.url}
+          target="_blank"
+          rel="noreferrer"
+        >
+          {link.text}
+        </a>
+      </>
+    );
+  }
+
+  const before = text.slice(0, idx);
+  const after = text.slice(idx + link.text.length);
+  return (
+    <>
+      {before}
+      <a
+        className="underline underline-offset-4 text-primary"
+        href={link.url}
+        target="_blank"
+        rel="noreferrer"
+      >
+        {link.text}
+      </a>
+      {after}
+    </>
+  );
+}
+
 export function AdditionalWork() {
   return (
     <section className="py-16 md:py-20">
