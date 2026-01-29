@@ -33,10 +33,10 @@ const additionalWorkItems: AdditionalWorkItem[] = [
     subtitle: "Positioning and Messaging",
     image: practiceAppImage,
     paragraph1:
-      "Led end-to-end go-to-market planning and positioning for a new internal practice app, aligning stakeholders across product, design, and operations.",
-    paragraph2: "Documented user segments and messaging in the Miro board.",
+      "An AI-powered app for novice sports players to improve their game.",
+    paragraph2: "Led customer segmentation brainstorm resulting in prioritization of different customer personas for MVP. Drove definition of value proposition and crafted positioning and messaging frameworks for identified target audience.",
     link: {
-      text: "Miro board",
+      text: "customer segmentation brainstorm",
       href: "https://miro.com",
     },
     hackathon: {
@@ -49,8 +49,9 @@ const additionalWorkItems: AdditionalWorkItem[] = [
     subtitle: "Positioning and Messaging",
     image: snapsellAppImage,
     paragraph1:
-      "Supported launch messaging and in-product education, focusing on clarity of value and reducing time-to-first-success.",
-    paragraph2: "Captured learnings and experiment outcomes in the project doc.",
+      "An AI-powered marketplace app for casual sellers to make money."
+
+    paragraph2: "Developed product and messaging positioning for casual sellers through market analysis and customer feedback. Presented live product demo and value prop in front of an audience of 100+."
     hackathon: {
       name: "Flowgad Hackathon",
       status: "completed",
