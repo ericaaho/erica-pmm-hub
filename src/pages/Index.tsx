@@ -51,8 +51,8 @@ export default function Index() {
                   lowers the barrier to building.
                 </p>
                 <p>
-                  Outside of work, I vibe code with friends, where I lead thoughtful messaging and positioning often
-                  making the difference between shipping and success.
+                  Outside of work, I vibe code with friends, where I craft customer segmentation and thoughtful
+                  messaging as a differentiator for success.
                 </p>
               </div>
               <div className="pt-4">
