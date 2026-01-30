@@ -19,16 +19,16 @@ export default function Index() {
   return (
     <Layout>
       {/* Hero Section */}
-      <section className="py-12 md:py-20 bg-gradient-to-b from-white via-slate-50 to-white">
-        <div className="container mx-auto px-4 sm:px-6">
+      <section className="py-16 md:py-20 bg-gradient-to-b from-white via-slate-50 to-white">
+        <div className="container mx-auto px-6">
           <motion.div
-            className="grid md:grid-cols-2 gap-8 md:gap-12 items-center max-w-5xl mx-auto"
-            initial={{ opacity: 0, y: 32 }}
+            className="grid md:grid-cols-2 gap-12 items-center max-w-5xl mx-auto"
+            initial={{ opacity: 0, y: 50 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true, amount: 0.2 }}
             transition={{ duration: 0.6, ease: "easeOut" }}
           >
-            <div className="aspect-square rounded-2xl overflow-hidden border border-border/50 max-w-xs sm:max-w-sm md:max-w-md mx-auto w-full shadow-lg">
+            <div className="aspect-square rounded-2xl overflow-hidden border border-border/50 max-w-md mx-auto w-full shadow-lg">
               <img
                 src={profilePhoto}
                 alt="Erica - Fintech Product Marketing Leader"
@@ -36,10 +36,10 @@ export default function Index() {
               />
             </div>
 
-            <div className="space-y-5 md:space-y-6 text-center md:text-left">
-              <h1 className="text-3xl sm:text-4xl md:text-5xl font-semibold text-foreground">Hello there! I'm Erica</h1>
+            <div className="space-y-6">
+              <h1 className="text-4xl md:text-5xl font-semibold text-foreground">Hello there! I'm Erica</h1>
 
-              <div className="space-y-4 text-muted-foreground leading-relaxed text-sm sm:text-base">
+              <div className="space-y-4 text-muted-foreground leading-relaxed">
                 <p>
                   I'm a fintech product leader with 7+ years of experience launching payments and card products at
                   high-growth B2B and B2C startups. Working across both sides of the market has given me a rare vantage
@@ -48,7 +48,9 @@ export default function Index() {
                 </p>
                 <p>
                   In a market crowded with increasingly similar offerings, I focus on translating complex financial
-                  products into clear, human messaging that fits naturally into customers' lives.
+                  products into clear, human messaging that fits naturally into customers' lives. I believe this ability
+                  to deeply understand customers—and communicate value with precision—will be a key differentiator as AI
+                  lowers the barrier to building.
                 </p>
                 <p>
                   Outside of work, I vibe code with friends, where I lead customer segmentation and craft thoughtful
@@ -57,8 +59,8 @@ export default function Index() {
               </div>
 
               <div className="pt-4">
-                <p className="text-muted-foreground mb-2 text-sm">
-                  If you'd like to chat about a project or opportunity:
+                <p className="text-muted-foreground mb-2">
+                  If you'd like to chat about a project or opportunity you can reach me at:
                 </p>
                 <a
                   href="mailto:erica.sy.ho@gmail.com"
@@ -73,20 +75,18 @@ export default function Index() {
       </section>
 
       {/* Values Section */}
-      <section className="py-12 md:py-20 bg-slate-50">
-        <div className="container mx-auto px-4 sm:px-6">
+      <section className="py-16 md:py-20 bg-slate-50">
+        <div className="container mx-auto px-6">
           <motion.div
-            className="max-w-5xl mx-auto bg-white rounded-3xl border border-border/50 shadow-sm p-6 sm:p-8 md:p-12"
-            initial={{ opacity: 0, y: 32 }}
+            className="max-w-5xl mx-auto bg-white rounded-3xl border border-border/50 shadow-sm p-8 md:p-12"
+            initial={{ opacity: 0, y: 50 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true, amount: 0.2 }}
             transition={{ duration: 0.6, ease: "easeOut" }}
           >
-            <h2 className="text-xl sm:text-2xl md:text-3xl font-semibold text-foreground mb-6 text-center">
-              My Values
-            </h2>
+            <h2 className="text-2xl md:text-3xl font-semibold text-foreground mb-8 text-center">My Values</h2>
 
-            <div className="grid gap-6 md:grid-cols-3">
+            <div className="grid md:grid-cols-3 gap-6">
               {values.map((value) => (
                 <ValueCard key={value.title} {...value} />
               ))}
@@ -95,37 +95,35 @@ export default function Index() {
         </div>
       </section>
 
-      {/* Companies */}
-      <CompanyLogos />
+      {/* Companies Worked At */}
+      <motion.div
+        initial={{ opacity: 0, y: 50 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        viewport={{ once: true, amount: 0.2 }}
+        transition={{ duration: 0.6, ease: "easeOut" }}
+      >
+        <CompanyLogos />
+      </motion.div>
 
       {/* Notable PMM Work */}
-      <section className="py-12 md:py-20 bg-gradient-to-b from-white to-slate-50">
-        <div className="container mx-auto px-4 sm:px-6">
+      <section className="pt-16 md:pt-20 pb-8 bg-gradient-to-b from-white to-slate-50">
+        <div className="container mx-auto px-6">
           <motion.div
-            className="max-w-5xl mx-auto bg-white rounded-3xl border border-border/50 shadow-sm p-6 sm:p-8 md:p-12"
-            initial={{ opacity: 0, y: 32 }}
+            className="max-w-5xl mx-auto bg-white rounded-3xl border border-border/50 shadow-sm p-8 md:p-12"
+            initial={{ opacity: 0, y: 50 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true, amount: 0.2 }}
             transition={{ duration: 0.6, ease: "easeOut" }}
           >
-            <h2 className="text-2xl sm:text-3xl md:text-4xl font-semibold text-foreground mb-6">Notable PMM Work</h2>
+            <h2 className="text-3xl md:text-4xl font-semibold text-foreground mb-6">Notable PMM Work</h2>
 
             <CaseStudy
               title="Dave Debit Card Rewards — Positioning & Messaging"
-              titleLink="https://www.dave.com/debit-card"
               impact={
                 <span>
-                  Established clear category differentiation by positioning{" "}
-                  <a
-                    href="https://www.dave.com/debit-card"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="text-primary hover:underline underline-offset-2"
-                  >
-                    Dave Debit Card Rewards
-                  </a>{" "}
-                  as the only debit card rewards program offering cash back on all purchases, driving a 27% increase in
-                  debit card adoption.
+                  Established clear category differentiation by positioning Dave Debit Card Rewards as the only debit
+                  card rewards program offering cash back on all purchases, driving a 27% increase in debit card
+                  adoption.
                 </span>
               }
               whatIDid={[
@@ -160,15 +158,15 @@ export default function Index() {
               image={billVirtualCardImage}
               impact={
                 <span>
-                  Drove increase in 5% win rates in mid market customers by enabling sales to position virtual card
-                  rewards as a differentiated acquisition lever.
+                  Drove 5% increase in win rates and unlocked mid-market customers by enabling sales to position virtual
+                  card rewards as a differentiated acquisition lever.
                 </span>
               }
               whatIDid={[
                 "Identified virtual card rewards as a high-impact acquisition lever by listening to sales and customer feedback",
                 "Conducted competitive analysis on competitor reward programs to create rewards positioning and messaging hierarchy",
-                "Developed sales enablement assets, including battle cards, talk tracks, call scripts, and training materials, to reinforce positioning and differentiation",
-                "Led sales trainings and joined live sales calls to gather field feedback and continuously iterated on messaging and enablement",
+                "Developed sales enablement assets, including battle cards, talk tracks, call scripts, and training materials",
+                "Led sales trainings and joined live sales calls to gather field feedback and iterated on messaging",
               ]}
             />
           </motion.div>
@@ -176,11 +174,11 @@ export default function Index() {
       </section>
 
       {/* Additional Work */}
-      <section className="py-12 md:py-20 bg-slate-50">
-        <div className="container mx-auto px-4 sm:px-6">
+      <section className="py-16 md:py-20 bg-slate-50">
+        <div className="container mx-auto px-6">
           <motion.div
-            className="max-w-5xl mx-auto bg-white rounded-3xl border border-border/50 shadow-sm p-6 sm:p-8 md:p-12"
-            initial={{ opacity: 0, y: 32 }}
+            className="max-w-5xl mx-auto bg-white rounded-3xl border border-border/50 shadow-sm p-8 md:p-12"
+            initial={{ opacity: 0, y: 50 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true, amount: 0.2 }}
             transition={{ duration: 0.6, ease: "easeOut" }}
@@ -191,7 +189,14 @@ export default function Index() {
       </section>
 
       {/* Find Me At */}
-      <FindMeAt />
+      <motion.div
+        initial={{ opacity: 0, y: 50 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        viewport={{ once: true, amount: 0.2 }}
+        transition={{ duration: 0.6, ease: "easeOut" }}
+      >
+        <FindMeAt />
+      </motion.div>
     </Layout>
   );
 }
