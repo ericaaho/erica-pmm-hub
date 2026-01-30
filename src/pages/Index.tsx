@@ -159,8 +159,8 @@ export default function Index() {
               image={billVirtualCardImage}
               impact={
                 <span>
-                  Drove increased win rates in mid-market customers by enabling sales to position virtual card rewards
-                  as a differentiated acquisition lever.
+                  Drove 5% increase in win rates and unlocked mid-market customers by enabling sales to position virtual
+                  card rewards as a differentiated acquisition lever.
                 </span>
               }
               whatIDid={[
