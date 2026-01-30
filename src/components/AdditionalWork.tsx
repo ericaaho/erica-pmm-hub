@@ -121,7 +121,7 @@ export function AdditionalWork() {
                 >
                   {/* Image column */}
                   {item.image && (
-                    <div className="relative rounded-lg overflow-hidden border border-border/50 w-full md:w-[280px] h-auto md:h-[210px] flex-shrink-0">
+                    <div className="w-full md:w-[280px] h-auto md:h-[210px] rounded-lg overflow-hidden border border-border/50 flex-shrink-0">
                       <img src={item.image} alt={item.title} className="w-full h-full object-cover" />
                     </div>
                   )}
