@@ -1,19 +1,9 @@
 import type { ReactNode } from "react";
-
 import practiceAppImage from "@/assets/practice-app-customer-seg.png";
 import flowgladHackathonImage from "@/assets/flowglad-hackathon.jpeg";
 
-type InlineLink = {
-  text: string;
-  href: string;
-};
-
-type HackathonMeta = {
-  name: string;
-  status: "ongoing" | "completed";
-  place?: string;
-};
-
+type InlineLink = { text: string; href: string };
+type HackathonMeta = { name: string; status: "ongoing" | "completed"; place?: string };
 type AdditionalWorkItem = {
   title: string;
   subtitle: string;
@@ -24,9 +14,6 @@ type AdditionalWorkItem = {
   hackathon?: HackathonMeta;
 };
 
-// -----------------
-// Items with Hackathon info
-// -----------------
 const additionalWorkItems: AdditionalWorkItem[] = [
   {
     title: "Practice App",
@@ -35,14 +22,8 @@ const additionalWorkItems: AdditionalWorkItem[] = [
     paragraph1: "An AI-powered app for novice sports players to improve their game.",
     paragraph2:
       "Led customer segmentation brainstorm resulting in prioritization of different customer personas for MVP. Drove definition of value proposition and crafted positioning and messaging frameworks for identified target audience.",
-    link: {
-      text: "customer segmentation brainstorm",
-      href: "https://miro.com",
-    },
-    hackathon: {
-      name: "Gemini 3 Hackathon",
-      status: "ongoing",
-    },
+    link: { text: "customer segmentation brainstorm", href: "https://miro.com" },
+    hackathon: { name: "Gemini 3 Hackathon", status: "ongoing" },
   },
   {
     title: "SnapSell App",
@@ -51,22 +32,14 @@ const additionalWorkItems: AdditionalWorkItem[] = [
     paragraph1: "An AI-powered marketplace app for casual sellers to make money.",
     paragraph2:
       "Developed product and messaging positioning for casual sellers through market analysis and customer feedback. Presented live product demo and value proposition in front of an audience of 100+.",
-    hackathon: {
-      name: "Flowgad Hackathon",
-      status: "completed",
-      place: "4th Place",
-    },
+    hackathon: { name: "Flowgad Hackathon", status: "completed", place: "4th Place" },
   },
 ];
 
-// -----------------
-// Format paragraph with optional inline link
-// -----------------
 function formatParagraph(text: string, link?: InlineLink): ReactNode {
   if (!link) return text;
-
   const idx = text.indexOf(link.text);
-  if (idx === -1) {
+  if (idx === -1)
     return (
       <>
         {text}{" "}
@@ -80,11 +53,8 @@ function formatParagraph(text: string, link?: InlineLink): ReactNode {
         </a>
       </>
     );
-  }
-
   const before = text.slice(0, idx);
   const after = text.slice(idx + link.text.length);
-
   return (
     <>
       {before}
@@ -101,9 +71,6 @@ function formatParagraph(text: string, link?: InlineLink): ReactNode {
   );
 }
 
-// -----------------
-// Component
-// -----------------
 export function AdditionalWork() {
   return (
     <section className="pt-8 pb-16 md:pt-10 md:pb-20">
@@ -114,24 +81,17 @@ export function AdditionalWork() {
           <div className="space-y-8">
             {additionalWorkItems.map((item) => (
               <article key={item.title} className="bg-background rounded-xl border border-border/50 overflow-hidden">
-                <div
-                  className={`grid grid-cols-1 md:grid-cols-${
-                    item.image ? "[280px_1fr]" : "1fr"
-                  } gap-6 md:gap-8 items-start`}
-                >
-                  {/* Image column */}
+                <div className={`grid gap-8 items-stretch ${item.image ? "md:grid-cols-[minmax(0,280px)_1fr]" : ""}`}>
                   {item.image && (
-                    <div className="w-full md:w-[280px] h-auto md:h-[210px] rounded-lg overflow-hidden border border-border/50 flex-shrink-0">
+                    <div className="relative w-full md:w-auto aspect-[4/3] rounded-lg overflow-hidden border border-border/50">
                       <img src={item.image} alt={item.title} className="w-full h-full object-cover" />
                     </div>
                   )}
 
-                  {/* Content column */}
-                  <div className="p-4 md:py-6 md:pl-0 md:pr-6 space-y-3">
+                  <div className="p-6 md:py-6 md:pl-0 md:pr-6 space-y-3">
                     <div className="space-y-1">
                       <div className="flex items-center gap-2 flex-wrap">
                         <h3 className="text-xl font-semibold text-foreground">{item.title}</h3>
-
                         {item.hackathon && (
                           <span
                             className={`text-[10px] font-semibold px-2 py-0.5 rounded-md shadow-sm whitespace-nowrap ${
@@ -146,7 +106,6 @@ export function AdditionalWork() {
                           </span>
                         )}
                       </div>
-
                       <p className="text-sm text-primary font-medium">{item.subtitle}</p>
                     </div>
 
