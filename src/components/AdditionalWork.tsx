@@ -1,6 +1,7 @@
 import type { ReactNode } from "react";
 
 import practiceAppImage from "@/assets/practice-app-customer-seg.png";
+import flowgladHackathonImage from "@/assets/flowglad-hackathon.jpeg";
 
 
 type InlineLink = {
@@ -47,6 +48,7 @@ const additionalWorkItems: AdditionalWorkItem[] = [
   {
     title: "SnapSell App",
     subtitle: "Positioning and Messaging",
+    image: flowgladHackathonImage,
     paragraph1: "An AI-powered marketplace app for casual sellers to make money.",
     paragraph2:
       "Developed product and messaging positioning for casual sellers through market analysis and customer feedback. Presented live product demo and value proposition in front of an audience of 100+.",
