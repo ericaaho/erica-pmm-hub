@@ -1,7 +1,7 @@
 import type { ReactNode } from "react";
 
 import practiceAppImage from "@/assets/practice-app-customer-seg.png";
-import snapsellAppImage from "@/assets/snapsell-listing.png";
+
 
 type InlineLink = {
   text: string;
@@ -17,7 +17,7 @@ type HackathonMeta = {
 type AdditionalWorkItem = {
   title: string;
   subtitle: string;
-  image: string;
+  image?: string;
   paragraph1: string;
   paragraph2: string;
   link?: InlineLink;
@@ -47,7 +47,6 @@ const additionalWorkItems: AdditionalWorkItem[] = [
   {
     title: "SnapSell App",
     subtitle: "Positioning and Messaging",
-    image: snapsellAppImage,
     paragraph1: "An AI-powered marketplace app for casual sellers to make money.",
     paragraph2:
       "Developed product and messaging positioning for casual sellers through market analysis and customer feedback. Presented live product demo and value proposition in front of an audience of 100+.",
@@ -114,11 +113,13 @@ export function AdditionalWork() {
           <div className="space-y-8">
             {additionalWorkItems.map((item) => (
               <article key={item.title} className="bg-background rounded-xl border border-border/50 overflow-hidden">
-                <div className="grid md:grid-cols-[280px_1fr] gap-8 items-stretch">
+                <div className={`grid ${item.image ? 'md:grid-cols-[280px_1fr]' : ''} gap-8 items-stretch`}>
                   {/* Image column */}
-                  <div className="relative rounded-lg overflow-hidden border border-border/50 flex-shrink-0 w-[280px] h-[210px]">
-                    <img src={item.image} alt={item.title} className="w-full h-full object-cover" />
-                  </div>
+                  {item.image && (
+                    <div className="relative rounded-lg overflow-hidden border border-border/50 flex-shrink-0 w-[280px] h-[210px]">
+                      <img src={item.image} alt={item.title} className="w-full h-full object-cover" />
+                    </div>
+                  )}
 
                   {/* Content column */}
                   <div className="p-6 md:py-6 md:pl-0 md:pr-6 space-y-3">
