@@ -26,11 +26,15 @@ export function CaseStudy({ title, titleLink, impact, whatIDid, image }: CaseStu
     <article className="py-8 border-b border-border/50 last:border-b-0 last:pb-0">
       <div className="grid gap-8 items-start md:grid-cols-[minmax(0,300px)_1fr]">
         {/* Image or Placeholder */}
-        <div className="w-full md:w-auto aspect-[4/3] max-w-[300px] rounded-lg overflow-hidden border border-border/50 bg-muted flex items-center justify-center">
+        <div className="w-full md:w-auto max-w-[300px] rounded-lg overflow-hidden border border-border/50 bg-muted">
           {image ? (
-            <img src={image} alt={title} className="w-full h-full object-cover" />
+            <div className="aspect-[4/3] w-full">
+              <img src={image} alt={title} className="w-full h-full object-cover" />
+            </div>
           ) : (
-            <span className="text-sm text-muted-foreground text-center px-4">Case study visual coming soon</span>
+            <div className="aspect-[4/3] w-full flex items-center justify-center">
+              <span className="text-sm text-muted-foreground text-center px-4">Case study visual coming soon</span>
+            </div>
           )}
         </div>
 
