@@ -2,7 +2,7 @@ import { Layout } from "@/components/Layout";
 import { ValueCard } from "@/components/ValueCard";
 import { CompanyLogos } from "@/components/CompanyLogos";
 import { CaseStudy } from "@/components/CaseStudy";
-import { AdditionalWork } from "@/components/AdditionalWork";
+import { AdditionalWorkSection } from "@/components/AdditionalWorkSection";
 import { FindMeAt } from "@/components/FindMeAt";
 import profilePhoto from "@/assets/profile-photo.jpg";
 import divvyImage from "@/assets/acquisition.png";
@@ -20,7 +20,7 @@ export default function Index() {
     <Layout>
       {/* Hero Section */}
       <section className="py-16 md:py-20 bg-gradient-to-b from-white via-slate-50 to-white">
-        <div className="container mx-auto px-6">
+        <div className="container mx-auto px-4 sm:px-6 md:px-12">
           <motion.div
             className="grid md:grid-cols-2 gap-12 items-center max-w-5xl mx-auto"
             initial={{ opacity: 0, y: 50 }}
@@ -28,18 +28,18 @@ export default function Index() {
             viewport={{ once: true, amount: 0.2 }}
             transition={{ duration: 0.6, ease: "easeOut" }}
           >
-            <div className="aspect-square rounded-2xl overflow-hidden border border-border/50 max-w-md mx-auto w-full shadow-lg">
+            <div className="rounded-2xl overflow-hidden border border-border/50 max-w-md mx-auto w-full shadow-lg">
               <img
                 src={profilePhoto}
                 alt="Erica - Fintech Product Marketing Leader"
-                className="w-full h-full object-cover"
+                className="w-full h-auto max-w-full object-cover"
               />
             </div>
 
             <div className="space-y-6">
               <h1 className="text-4xl md:text-5xl font-semibold text-foreground">Hello there! I'm Erica</h1>
 
-              <div className="space-y-4 text-muted-foreground leading-relaxed">
+              <div className="space-y-4 text-muted-foreground leading-relaxed break-words">
                 <p>
                   I'm a fintech product leader with 7+ years of experience launching payments and card products at
                   high-growth B2B and B2C startups. Working across both sides of the market has given me a rare vantage
@@ -76,9 +76,9 @@ export default function Index() {
 
       {/* Values Section */}
       <section className="py-16 md:py-20 bg-slate-50">
-        <div className="container mx-auto px-6">
+        <div className="container mx-auto px-4 sm:px-6 md:px-12">
           <motion.div
-            className="max-w-5xl mx-auto bg-white rounded-3xl border border-border/50 shadow-sm p-8 md:p-12"
+            className="max-w-5xl mx-auto bg-white rounded-3xl border border-border/50 shadow-sm p-6 sm:p-8 md:p-12 w-full break-words"
             initial={{ opacity: 0, y: 50 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true, amount: 0.2 }}
@@ -107,9 +107,9 @@ export default function Index() {
 
       {/* Notable PMM Work */}
       <section className="pt-16 md:pt-20 pb-8 bg-gradient-to-b from-white to-slate-50">
-        <div className="container mx-auto px-6">
+        <div className="container mx-auto px-4 sm:px-6 md:px-12">
           <motion.div
-            className="max-w-5xl mx-auto bg-white rounded-3xl border border-border/50 shadow-sm p-8 md:p-12"
+            className="max-w-5xl mx-auto bg-white rounded-3xl border border-border/50 shadow-sm p-6 sm:p-8 md:p-12 w-full break-words"
             initial={{ opacity: 0, y: 50 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true, amount: 0.2 }}
@@ -158,8 +158,8 @@ export default function Index() {
               image={billVirtualCardImage}
               impact={
                 <span>
-                  Drove 5% increase in win rates and unlocked mid-market customers by enabling sales to position virtual
-                  card rewards as a differentiated acquisition lever.
+                  Drove increased win rates in mid-market customers by enabling sales to position virtual card rewards
+                  as a differentiated acquisition lever.
                 </span>
               }
               whatIDid={[
@@ -174,19 +174,7 @@ export default function Index() {
       </section>
 
       {/* Additional Work */}
-      <section className="py-16 md:py-20 bg-slate-50">
-        <div className="container mx-auto px-6">
-          <motion.div
-            className="max-w-5xl mx-auto bg-white rounded-3xl border border-border/50 shadow-sm p-8 md:p-12"
-            initial={{ opacity: 0, y: 50 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true, amount: 0.2 }}
-            transition={{ duration: 0.6, ease: "easeOut" }}
-          >
-            <AdditionalWork />
-          </motion.div>
-        </div>
-      </section>
+      <AdditionalWorkSection />
 
       {/* Find Me At */}
       <motion.div

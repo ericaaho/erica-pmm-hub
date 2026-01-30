@@ -3,7 +3,6 @@ import type { ReactNode } from "react";
 import practiceAppImage from "@/assets/practice-app-customer-seg.png";
 import flowgladHackathonImage from "@/assets/flowglad-hackathon.jpeg";
 
-
 type InlineLink = {
   text: string;
   href: string;
@@ -115,16 +114,20 @@ export function AdditionalWork() {
           <div className="space-y-8">
             {additionalWorkItems.map((item) => (
               <article key={item.title} className="bg-background rounded-xl border border-border/50 overflow-hidden">
-                <div className={`grid ${item.image ? 'md:grid-cols-[280px_1fr]' : ''} gap-8 items-stretch`}>
+                <div
+                  className={`grid grid-cols-1 md:grid-cols-${
+                    item.image ? "[280px_1fr]" : "1fr"
+                  } gap-6 md:gap-8 items-start`}
+                >
                   {/* Image column */}
                   {item.image && (
-                    <div className="relative rounded-lg overflow-hidden border border-border/50 flex-shrink-0 w-[280px] h-[210px]">
+                    <div className="relative rounded-lg overflow-hidden border border-border/50 w-full md:w-[280px] h-auto md:h-[210px] flex-shrink-0">
                       <img src={item.image} alt={item.title} className="w-full h-full object-cover" />
                     </div>
                   )}
 
                   {/* Content column */}
-                  <div className="p-6 md:py-6 md:pl-0 md:pr-6 space-y-3">
+                  <div className="p-4 md:py-6 md:pl-0 md:pr-6 space-y-3">
                     <div className="space-y-1">
                       <div className="flex items-center gap-2 flex-wrap">
                         <h3 className="text-xl font-semibold text-foreground">{item.title}</h3>
