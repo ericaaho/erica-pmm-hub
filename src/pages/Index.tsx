@@ -19,7 +19,7 @@ export default function Index() {
   return (
     <Layout>
       {/* Hero Section */}
-      <section className="py-16 md:py-20 bg-white">
+      <section className="py-16 md:py-20 bg-gradient-to-b from-white via-slate-50 to-white">
         <div className="container mx-auto px-6">
           <motion.div
             className="grid md:grid-cols-2 gap-12 items-center max-w-5xl mx-auto"
@@ -35,8 +35,10 @@ export default function Index() {
                 className="w-full h-full object-cover"
               />
             </div>
+
             <div className="space-y-6">
               <h1 className="text-4xl md:text-5xl font-semibold text-foreground">Hello there! I'm Erica</h1>
+
               <div className="space-y-4 text-muted-foreground leading-relaxed">
                 <p>
                   I'm a fintech product leader with 7+ years of experience launching payments and card products at
@@ -55,6 +57,7 @@ export default function Index() {
                   messaging as a differentiator for success.
                 </p>
               </div>
+
               <div className="pt-4">
                 <p className="text-muted-foreground mb-2">
                   If you'd like to chat about a project or opportunity you can reach me at:
@@ -64,9 +67,6 @@ export default function Index() {
                   className="inline-flex items-center text-primary font-medium hover:underline underline-offset-4"
                 >
                   erica.sy.ho@gmail.com
-                  <svg className="w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M14 5l7 7m0 0l-7 7m7-7H3" />
-                  </svg>
                 </a>
               </div>
             </div>
@@ -75,16 +75,17 @@ export default function Index() {
       </section>
 
       {/* Values Section */}
-      <section className="py-16 md:py-20 bg-gray-50">
+      <section className="py-16 md:py-20 bg-slate-50">
         <div className="container mx-auto px-6">
           <motion.div
-            className="max-w-5xl mx-auto"
+            className="max-w-5xl mx-auto bg-white rounded-3xl border border-border/50 shadow-sm p-8 md:p-12"
             initial={{ opacity: 0, y: 50 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true, amount: 0.2 }}
             transition={{ duration: 0.6, ease: "easeOut" }}
           >
             <h2 className="text-2xl md:text-3xl font-semibold text-foreground mb-8 text-center">My Values</h2>
+
             <div className="grid md:grid-cols-3 gap-6">
               {values.map((value) => (
                 <ValueCard key={value.title} {...value} />
@@ -105,10 +106,10 @@ export default function Index() {
       </motion.div>
 
       {/* Notable PMM Work */}
-      <section className="pt-16 md:pt-20 pb-8 bg-white">
+      <section className="pt-16 md:pt-20 pb-8 bg-gradient-to-b from-white to-slate-50">
         <div className="container mx-auto px-6">
           <motion.div
-            className="max-w-5xl mx-auto"
+            className="max-w-5xl mx-auto bg-white rounded-3xl border border-border/50 shadow-sm p-8 md:p-12"
             initial={{ opacity: 0, y: 50 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true, amount: 0.2 }}
@@ -120,15 +121,9 @@ export default function Index() {
               title="Dave Debit Card Rewards — Positioning & Messaging"
               impact={
                 <>
-                  Established clear category differentiation by positioning{" "}
-                  <a
-                    href="https://dave.com/cashback/terms"
-                    className="text-primary underline underline-offset-4 hover:text-primary/80"
-                  >
-                    Dave Debit Card Rewards
-                  </a>{" "}
-                  as the only debit card rewards program offering cash back on all purchases, driving a 27% increase in
-                  debit card adoption.
+                  Established clear category differentiation by positioning Dave Debit Card Rewards as the only debit
+                  card rewards program offering cash back on all purchases, driving a 27% increase in debit card
+                  adoption.
                 </>
               }
               whatIDid={[
@@ -145,14 +140,8 @@ export default function Index() {
               image={divvyImage}
               impact={
                 <>
-                  Influenced strategic direction for{" "}
-                  <a
-                    href="https://techcrunch.com/2021/05/06/why-did-bill-com-pay-2-5b-for-divvy/"
-                    className="text-primary underline underline-offset-4 hover:text-primary/80"
-                  >
-                    BILL's $2.5B acquisition of Divvy
-                  </a>{" "}
-                  by owning customer and market insights that shaped leadership narrative and decision-making.
+                  Influenced strategic direction for BILL's $2.5B acquisition of Divvy by owning customer and market
+                  insights that shaped leadership narrative and decision-making.
                 </>
               }
               whatIDid={[
@@ -169,32 +158,26 @@ export default function Index() {
               image={billVirtualCardImage}
               impact={
                 <>
-                  Drove increase in 5% win rates in mid market customers by enabling sales to position{" "}
-                  <a
-                    href="https://www.bill.com/product/rewards"
-                    className="text-primary underline underline-offset-4 hover:text-primary/80"
-                  >
-                    virtual card rewards
-                  </a>{" "}
-                  as a differentiated acquisition lever.
+                  Drove 5% increased win rates and unlocked mid-market customers by enabling sales to position virtual
+                  card rewards as a differentiated acquisition lever.
                 </>
               }
               whatIDid={[
                 "Identified virtual card rewards as a high-impact acquisition lever by listening to sales and customer feedback",
                 "Conducted competitive analysis on competitor reward programs to create rewards positioning and messaging hierarchy",
-                "Developed sales enablement assets, including battle cards, talk tracks, call scripts, and training materials, to reinforce positioning and differentiation",
-                "Led sales trainings and joined live sales calls to gather field feedback and continuously iterated on messaging and enablement",
+                "Developed sales enablement assets, including battle cards, talk tracks, call scripts, and training materials",
+                "Led sales trainings and joined live sales calls to gather field feedback and iterated on messaging",
               ]}
             />
           </motion.div>
         </div>
       </section>
 
-      {/* Divider + Additional PMM Work */}
-      <section className="py-16 md:py-20 bg-gray-50">
+      {/* Additional Work */}
+      <section className="py-16 md:py-20 bg-slate-50">
         <div className="container mx-auto px-6">
           <motion.div
-            className="max-w-5xl mx-auto"
+            className="max-w-5xl mx-auto bg-white rounded-3xl border border-border/50 shadow-sm p-8 md:p-12"
             initial={{ opacity: 0, y: 50 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true, amount: 0.2 }}
