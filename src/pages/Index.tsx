@@ -116,10 +116,64 @@ export default function Index() {
               Notable PMM Work
             </h2>
 
-            {/* CaseStudies unchanged */}
-            <CaseStudy ... />
-            <CaseStudy ... />
-            <CaseStudy ... />
+            <CaseStudy
+              title="Dave Debit Card Rewards — Positioning & Messaging"
+              titleLink="https://www.dave.com/debit-card"
+              impact={
+                <>
+                  Established clear category differentiation by positioning{" "}
+                  <a
+                    href="https://www.dave.com/debit-card"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="text-primary hover:underline underline-offset-2"
+                  >
+                    Dave Debit Card Rewards
+                  </a>{" "}
+                  as the only debit card rewards program offering cash back on all purchases, driving a 27% increase in debit card adoption.
+                </>
+              }
+              whatIDid={[
+                "Led end-to-end positioning and messaging strategy grounded in competitive and customer insight",
+                "Authored a competitive one-pager analyzing incumbent rewards programs to recommend a differentiated positioning",
+                "Designed and executed an in-app painted door experiment to validate core value propositions, messaging hierarchy, and product–market fit",
+                "Built an ROI and unit economics model across multiple cash-back scenarios to align positioning with sustainable growth and revenue goals",
+                "Conducted customer interviews and surveys to diagnose comprehension gaps and refine the rewards value proposition and messaging framework",
+              ]}
+            />
+
+            <CaseStudy
+              title="BILL × Divvy — Acquisition Narrative & Customer Insights"
+              image={divvyImage}
+              impact={
+                <>
+                  Influenced strategic direction for BILL's $2.5B acquisition of Divvy by owning customer and market insights that shaped leadership narrative and decision-making.
+                </>
+              }
+              whatIDid={[
+                "Owned customer discovery to uncover core jobs-to-be-done, unmet needs, and perception of BILL's brand across segments",
+                "Defined and synthesized key customer personas emerging from distinct use cases and company sizes",
+                "Led market and competitive analysis of expense management and accounts payable platforms, including positioning, differentiation, and whitespace",
+                "Translated customer and market insights into a clear acquisition narrative via an executive one-pager and pitch deck",
+                "Presented recommendations to executive leadership, directly informing acquisition strategy and rationale",
+              ]}
+            />
+
+            <CaseStudy
+              title="BILL Virtual Card Rewards — Sales Enablement"
+              image={billVirtualCardImage}
+              impact={
+                <>
+                  Drove increase in 5% win rates in mid market customers by enabling sales to position virtual card rewards as a differentiated acquisition lever.
+                </>
+              }
+              whatIDid={[
+                "Identified virtual card rewards as a high-impact acquisition lever by listening to sales and customer feedback",
+                "Conducted competitive analysis on competitor reward programs to create rewards positioning and messaging hierarchy",
+                "Developed sales enablement assets, including battle cards, talk tracks, call scripts, and training materials, to reinforce positioning and differentiation",
+                "Led sales trainings and joined live sales calls to gather field feedback and continuously iterated on messaging and enablement",
+              ]}
+            />
           </motion.div>
         </div>
       </section>
@@ -132,6 +186,15 @@ export default function Index() {
             initial={{ opacity: 0, y: 32 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true, amount: 0.2 }}
-            transition={{ duration: 0.6, ease: "easeOut"
+            transition={{ duration: 0.6, ease: "easeOut" }}
+          >
+            <AdditionalWork />
+          </motion.div>
+        </div>
+      </section>
 
-
+      {/* Find Me At */}
+      <FindMeAt />
+    </Layout>
+  );
+}
