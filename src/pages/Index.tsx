@@ -12,7 +12,7 @@ import { motion } from "framer-motion";
 const values = [
   { title: "Openness", description: "Different perspectives lead to better outcomes." },
   { title: "Curiosity", description: "Interest and questions fuel learning." },
-  { title: "Impact", description: "Prioritize business results with customer needs." },
+  { title: "Impact", description: "Prioritize outsized business results to drive the most impact." },
 ];
 
 export default function Index() {
