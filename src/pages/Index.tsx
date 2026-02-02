@@ -12,7 +12,7 @@ import { motion } from "framer-motion";
 const values = [
   { title: "Impact", description: "Prioritize ROI, customer growth, and revenue to drive the most impact." },
   { title: "Openness", description: "Different perspectives lead to better outcomes." },
-  { title: "Curiosity", description: "Interest and questions fuel learning." },
+  { title: "Curiosity", description: "Interest and questions fuel learning and growth." },
 ];
 
 export default function Index() {
