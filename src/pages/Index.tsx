@@ -10,7 +10,7 @@ import billVirtualCardImage from "@/assets/bill-virtual-card-battlecard.png";
 import { motion } from "framer-motion";
 
 const values = [
-  { title: "Impact", description: "Prioritize ROI, customer growth, and revenue to drive the most impact." },
+  { title: "Impact", description: "Prioritize work that moves the needle on revenue." },
   { title: "Openness", description: "Different perspectives lead to better outcomes." },
   { title: "Curiosity", description: "Interest and questions fuel learning and growth." },
 ];
