@@ -29,7 +29,7 @@ export function CaseStudy({ title, titleLink, impact, whatIDid, image }: CaseStu
         <div className="flex-shrink-0 w-full md:w-[300px] rounded-lg overflow-hidden border border-border/50 bg-muted">
           <div className="aspect-[4/3] w-full flex items-center justify-center">
             {image ? (
-              <img src={image} alt={title} className="w-full h-full object-cover" />
+              <img src={image} alt={title} className="w-full h-full object-cover object-center" />
             ) : (
               <span className="text-sm text-muted-foreground text-center px-4">Case study visual coming soon</span>
             )}
