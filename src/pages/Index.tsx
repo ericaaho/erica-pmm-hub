@@ -5,7 +5,7 @@ import { CaseStudy } from "@/components/CaseStudy";
 import { AdditionalWork } from "@/components/AdditionalWork";
 import { FindMeAt } from "@/components/FindMeAt";
 import profilePhoto from "@/assets/profile-photo.jpg";
-import daveRewardsImage from "@/assets/dave-rewards-gemini.png";
+import daveRewardsImage from "@/assets/rewards-chatgpt.png";
 import divvyImage from "@/assets/acquisition.png";
 import billVirtualCardImage from "@/assets/bill-virtual-card-battlecard.png";
 import { motion } from "framer-motion";
