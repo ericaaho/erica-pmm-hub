@@ -6,8 +6,8 @@ import { AdditionalWork } from "@/components/AdditionalWork";
 import { FindMeAt } from "@/components/FindMeAt";
 import profilePhoto from "@/assets/profile-photo.jpg";
 import daveRewardsImage from "@/assets/rewards-chatgpt.png";
-import divvyImage from "@/assets/pineapple-venn.png";
-import billVirtualCardImage from "@/assets/bill-virtual-card-battlecard.png";
+import divvyImage from "@/assets/venn-3.png";
+import billVirtualCardImage from "@/assets/battlecard-3.png";
 import { motion } from "framer-motion";
 
 const values = [
