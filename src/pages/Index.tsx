@@ -132,8 +132,8 @@ export default function Index() {
                 "Led end-to-end positioning and messaging strategy grounded in competitive and customer insight",
                 "Authored a competitive one-pager analyzing incumbent rewards programs to recommend a differentiated positioning",
                 "Designed and executed an in-app painted door experiment to validate core value propositions, messaging hierarchy, and product–market fit",
-                "Built an ROI and unit economics model across multiple cash-back scenarios to align positioning with sustainable growth and revenue goals",
-                "Conducted customer interviews and surveys to diagnose comprehension gaps and refine the rewards value proposition and messaging framework",
+                "Built an ROI and unit economics model across 7+ cash-back scenarios to align positioning with sustainable growth and revenue goals",
+                "Conducted 5+ customer interviews and 2+ surveys to diagnose comprehension gaps and refine the rewards value proposition and messaging framework",
               ]}
               // No image → placeholder shows
             />
@@ -148,8 +148,8 @@ export default function Index() {
                 </span>
               }
               whatIDid={[
-                "Owned customer discovery to uncover core jobs-to-be-done, unmet needs, and perception of BILL's brand across segments",
-                "Defined and synthesized key customer personas emerging from distinct use cases and company sizes",
+                "Owned 10+ customer interviews and 2+ surveys to uncover core jobs-to-be-done, unmet needs, and perception of BILL's brand across segments",
+                "Defined and synthesized 3 key customer personas emerging from distinct use cases and company sizes",
                 "Led market and competitive analysis of expense management and accounts payable platforms, including positioning, differentiation, and whitespace",
                 "Translated customer and market insights into a clear acquisition narrative via an executive one-pager and pitch deck",
                 "Presented recommendations to executive leadership, directly informing acquisition strategy and rationale",
@@ -169,7 +169,7 @@ export default function Index() {
                 "Identified virtual card rewards as a high-impact acquisition lever by listening to sales and customer feedback",
                 "Conducted competitive analysis on competitor reward programs to create rewards positioning and messaging hierarchy",
                 "Developed sales enablement assets, including battle cards, talk tracks, call scripts, and training materials",
-                "Led sales trainings and joined live sales calls to gather field feedback and iterated on messaging",
+                "Led sales trainings and joined 10+ live sales calls to gather field feedback and iterated on messaging",
               ]}
             />
           </motion.div>
