@@ -128,8 +128,12 @@ export default function Index() {
                   adoption.
                 </span>
               }
+              quote={{
+                text: "As a product designer working closely with Erica, I found her to be incredibly collaborative and open to ideas, grounded in data and experimentation, and highly strategic in driving banking initiatives that met business goals while protecting the bottom line.",
+                name: "Shawn Kam",
+                context: "Product Designer at Dave"
+              }}
               whatIDid={[
-                "Led end-to-end positioning and messaging strategy grounded in competitive and customer insight",
                 "Authored a competitive one-pager analyzing incumbent rewards programs to recommend a differentiated positioning",
                 "Designed and executed an in-app painted door experiment to validate core value propositions, messaging hierarchy, and product–market fit",
                 "Built an ROI and unit economics model across 7+ cash-back scenarios to align positioning with sustainable growth and revenue goals",
