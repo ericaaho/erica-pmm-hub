@@ -4,11 +4,12 @@ interface CaseStudyProps {
   title: string;
   titleLink?: string;
   impact: ReactNode;
+  quote?: { text: string; name: string; context?: string };
   whatIDid: string[];
   image?: string;
 }
 
-export function CaseStudy({ title, titleLink, impact, whatIDid, image }: CaseStudyProps) {
+export function CaseStudy({ title, titleLink, impact, quote, whatIDid, image }: CaseStudyProps) {
   const TitleContent = titleLink ? (
     <a
       href={titleLink}
@@ -44,6 +45,15 @@ export function CaseStudy({ title, titleLink, impact, whatIDid, image }: CaseStu
             <h4 className="text-sm font-semibold text-primary uppercase tracking-wide mb-2">Impact</h4>
             <p className="text-muted-foreground leading-relaxed">{impact}</p>
           </div>
+
+          {quote && (
+            <div className="border-l-2 border-primary/40 pl-4 py-1">
+              <p className="text-muted-foreground italic leading-relaxed">"{quote.text}"</p>
+              <p className="text-sm text-foreground/70 mt-2 font-medium">
+                — {quote.name}{quote.context ? `, ${quote.context}` : ""}
+              </p>
+            </div>
+          )}
 
           <div>
             <h4 className="text-sm font-semibold text-primary uppercase tracking-wide mb-3">What I Did</h4>
